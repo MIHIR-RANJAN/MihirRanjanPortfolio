@@ -52,7 +52,23 @@ export default function Home() {
   };
 
 
-
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+  
+      const glowElement = document.getElementById('scroll-glow');
+      if (glowElement) {
+        glowElement.style.height = `${scrollPercent}%`;
+      }
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  
   // Trigger visibility after component mounts
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -289,6 +305,15 @@ export default function Home() {
 
   return (
     <div className="bg-black text-white relative">
+      {/* Scroll Progress Indicator */}
+      <div className="fixed right-2 top-[20%] h-[60vh] w-1 bg-gray-700 z-40 rounded-full overflow-hidden">
+        <div
+          id="scroll-glow"
+          className="w-full bg-blue-500 shadow-blue-500/60 shadow-lg transition-all duration-150 ease-in-out"
+          style={{ height: '0%' }}
+        ></div>
+      </div>
+
       {/* Fixed Background Canvas */}
       <div className="fixed inset-0 z-0">
         <canvas id="neuronCanvas" className="w-full h-full"></canvas>
@@ -320,7 +345,7 @@ export default function Home() {
             {/* RESUME BOX BUTTON */}
             <li>
               <a
-                href="https://drive.google.com/file/d/13a-BHXpxPmSTtnnb_zTGNiZPLKSPE_Ut/view?usp=sharing"
+                href="https://drive.google.com/file/d/1sGuvEvK1mfbyTMO6qzXmhjxI3pwaxcSz/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm transition-all duration-300"
@@ -374,7 +399,7 @@ export default function Home() {
           isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
         }`}>
           <a 
-            href="https://drive.google.com/file/d/13a-BHXpxPmSTtnnb_zTGNiZPLKSPE_Ut/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1sGuvEvK1mfbyTMO6qzXmhjxI3pwaxcSz/view?usp=sharing" 
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl text-white font-semibold shadow-md transition-colors duration-300"
@@ -423,7 +448,7 @@ export default function Home() {
               <ul className="space-y-4 text-black">
                 <li className="flex items-center gap-3">
                   <span className="text-blue-400">🎓</span>
-                  <span>Master of Technology in AI & Data Science (specialization in Cybersecurity) | 2024–Present | CGPA: 8.93 (Till 2nd sem) </span>
+                  <span>Master of Technology in AI & Data Science (specialization in Cybersecurity) | 2024–Present | CGPA: 8.93 (Till 2nd sem)</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="text-blue-400">🎓</span>
@@ -893,7 +918,7 @@ export default function Home() {
 
                 {/* Resume Button */}
                 <a
-                  href="https://drive.google.com/file/d/13a-BHXpxPmSTtnnb_zTGNiZPLKSPE_Ut/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1sGuvEvK1mfbyTMO6qzXmhjxI3pwaxcSz/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 border border-gray-500 px-5 py-2 rounded-full text-white hover:bg-white hover:text-black transition"
