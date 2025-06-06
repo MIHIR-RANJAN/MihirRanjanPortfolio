@@ -423,7 +423,7 @@ export default function Home() {
               <ul className="space-y-4 text-black">
                 <li className="flex items-center gap-3">
                   <span className="text-blue-400">🎓</span>
-                  <span>Master of Technology in AI & Data Science (specialization in Cybersecurity) | 2024–Present | CGPA: 8.90 (Till 2nd sem) </span>
+                  <span>Master of Technology in AI & Data Science (specialization in Cybersecurity) | 2024–Present | CGPA: 8.93 (Till 2nd sem) </span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="text-blue-400">🎓</span>
