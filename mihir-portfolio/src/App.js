@@ -320,7 +320,7 @@ export default function Home() {
             {/* RESUME BOX BUTTON */}
             <li>
               <a
-                href="https://drive.google.com/file/d/1B_JX7gC8zAdCprHqKo3PHlEQuZMnhJb8/view?usp=sharing"
+                href="https://drive.google.com/file/d/1sGuvEvK1mfbyTMO6qzXmhjxI3pwaxcSz/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm transition-all duration-300"
@@ -374,7 +374,7 @@ export default function Home() {
           isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
         }`}>
           <a 
-            href="https://drive.google.com/file/d/1B_JX7gC8zAdCprHqKo3PHlEQuZMnhJb8/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1sGuvEvK1mfbyTMO6qzXmhjxI3pwaxcSz/view?usp=sharing" 
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl text-white font-semibold shadow-md transition-colors duration-300"
@@ -763,16 +763,20 @@ export default function Home() {
             </a>
 
             {/* Game Dev */}
-            <div
-              className="transition-transform transform hover:scale-105 hover:brightness-110 bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-6 relative cursor-default"
+            <a
+              href="https://github.com/MIHIR-RANJAN/Universe-Making.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-transform transform hover:scale-105 hover:brightness-110 inline-block w-full"
             >
-              <h3 className="text-2xl font-bold text-green-400 mb-2"> Universe Making Game – Enigma 2021</h3>
-              <p className="text-gray-300">
+              <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-6 relative">
+                <h3 className="text-2xl font-bold text-purple-400 mb-2"> Universe Making Game – Enigma 2021</h3>
+                <p className="text-gray-300">
                 Won 2nd place in a game development coding event by Enigma (CS club), Mahindra University.
-              </p>
-              <span className="absolute bottom-4 right-6 text-xs text-gray-400">2021</span>
-            </div>
-
+                </p>
+                <span className="absolute bottom-4 right-6 text-xs text-gray-400">2021</span>
+              </div>
+            </a>
 
             {/* MUN Mention */}
             <a
@@ -889,7 +893,7 @@ export default function Home() {
 
                 {/* Resume Button */}
                 <a
-                  href="https://drive.google.com/file/d/1B_JX7gC8zAdCprHqKo3PHlEQuZMnhJb8/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1sGuvEvK1mfbyTMO6qzXmhjxI3pwaxcSz/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 border border-gray-500 px-5 py-2 rounded-full text-white hover:bg-white hover:text-black transition"
