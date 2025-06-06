@@ -1,0 +1,1390 @@
+// import React, { useEffect, useState } from 'react';
+// import { motion } from 'framer-motion';
+
+// export default function Home() {
+//   const text = "  |AI & Cybersecurity Enthusiast | NLP Researcher | Problem Solver";
+//   const [displayedText, setDisplayedText] = useState("");
+//   const [isTypingForward, setIsTypingForward] = useState(true);
+
+//   useEffect(() => {
+//     let index = isTypingForward ? 0 : text.length;
+//     const interval = setInterval(() => {
+//       if (isTypingForward) {
+//         setDisplayedText((prev) => prev + text.charAt(index));
+//         index++;
+//         if (index === text.length) {
+//           clearInterval(interval);
+//           setTimeout(() => setIsTypingForward(false), 1000);
+//         }
+//       } else {
+//         setDisplayedText((prev) => prev.slice(0, -1));
+//         index--;
+//         if (index === 0) {
+//           clearInterval(interval);
+//           setTimeout(() => setIsTypingForward(true), 1000);
+//         }
+//       }
+//     }, 50);
+//     return () => clearInterval(interval);
+//   }, [isTypingForward]);
+
+//   useEffect(() => {
+//     const canvas = document.getElementById('neuronCanvas');
+//     const ctx = canvas.getContext('2d');
+//     let stars = [];
+//     let animationFrameId;
+
+//     const setCanvasSize = () => {
+//       canvas.width = window.innerWidth;
+//       canvas.height = window.innerHeight;
+//     };
+//     setCanvasSize();
+//     window.addEventListener('resize', setCanvasSize);
+
+//     class Star {
+//       constructor() {
+//         this.x = Math.random() * canvas.width;
+//         this.y = Math.random() * canvas.height;
+//         this.size = Math.random() * 2 + 0.5;
+//         this.speedX = (Math.random() - 0.5) * 0.3;
+//         this.speedY = (Math.random() - 0.5) * 0.3;
+//         this.brightness = Math.random();
+//       }
+
+//       update() {
+//         this.x += this.speedX;
+//         this.y += this.speedY;
+
+//         // Wrap around screen
+//         if (this.x < 0) this.x = canvas.width;
+//         if (this.x > canvas.width) this.x = 0;
+//         if (this.y < 0) this.y = canvas.height;
+//         if (this.y > canvas.height) this.y = 0;
+
+//         // Twinkle effect
+//         this.brightness += (Math.random() - 0.5) * 0.1;
+//         this.brightness = Math.max(0, Math.min(1, this.brightness));
+//       }
+
+//       draw() {
+//         ctx.beginPath();
+//         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+//         ctx.fillStyle = `rgba(255, 255, 255, ${this.brightness})`;
+//         ctx.fill();
+//       }
+//     }
+
+//     // Create more stars for better coverage
+//     const numStars = Math.floor((canvas.width * canvas.height) / 10000);
+//     for (let i = 0; i < numStars; i++) {
+//       stars.push(new Star());
+//     }
+
+//     const drawConnections = () => {
+//       ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+//       ctx.lineWidth = 0.3;
+      
+//       for (let i = 0; i < stars.length; i++) {
+//         for (let j = i + 1; j < stars.length; j++) {
+//           const dx = stars[i].x - stars[j].x;
+//           const dy = stars[i].y - stars[j].y;
+//           const distance = Math.sqrt(dx * dx + dy * dy);
+
+//           // Increased connection distance for better coverage
+//           if (distance < 150) {
+//             ctx.beginPath();
+//             ctx.moveTo(stars[i].x, stars[i].y);
+//             ctx.lineTo(stars[j].x, stars[j].y);
+//             ctx.stroke();
+//           }
+//         }
+//       }
+//     };
+
+//     const animate = () => {
+//       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+//       ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+//       stars.forEach(star => {
+//         star.update();
+//         star.draw();
+//       });
+      
+//       drawConnections();
+//       animationFrameId = requestAnimationFrame(animate);
+//     };
+//     animate();
+
+//     return () => {
+//       window.removeEventListener('resize', setCanvasSize);
+//       cancelAnimationFrame(animationFrameId);
+//     };
+//   }, []);
+
+//   return (
+//     <div className="min-h-screen bg-black text-white relative overflow-hidden">
+//       <div className="absolute inset-0 z-0">
+//         <canvas id="neuronCanvas" className="w-full h-full"></canvas>
+//       </div>
+
+//       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-32">
+//         <motion.h1 
+//           className="text-5xl md:text-7xl font-bold"
+//           initial={{ opacity: 0, y: -20 }} 
+//           animate={{ opacity: 1, y: 0 }} 
+//           transition={{ duration: 1 }}
+//         >
+//           Hi, I'm Mihir Ranjan
+//         </motion.h1>
+
+//         <p className="mt-6 text-xl md:text-2xl text-gray-300 max-w-2xl">
+//           {displayedText}<span className="animate-pulse">|</span>
+//         </p>
+
+//         <motion.div 
+//           className="mt-10 flex gap-4"
+//           initial={{ opacity: 0 }} 
+//           animate={{ opacity: 1 }} 
+//           transition={{ delay: 1.5, duration: 1 }}
+//         >
+//           <a href="/Users/doctorranjan/Desktop/MihirRanjanPortfolio/mihir-portfolio/files/MihirRanjan_Resume_2604.pdf" className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl text-white font-semibold shadow-md">
+//             📄 View Resume
+//           </a>
+//           <a href="#contact" className="bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-xl text-white font-semibold shadow-md">
+//             📫 Contact Me
+//           </a>
+//         </motion.div>
+//       </div>
+//     </div>
+//   );
+// }
+
+
+
+// import React, { useEffect, useState } from 'react';
+// import { motion } from 'framer-motion';
+
+// export default function Home() {
+//   const text = "  |AI & Cybersecurity Enthusiast | NLP Researcher | Problem Solver";
+//   const [displayedText, setDisplayedText] = useState("");
+//   const [isTypingForward, setIsTypingForward] = useState(true);
+
+//   useEffect(() => {
+//     let index = isTypingForward ? 0 : text.length;
+//     const interval = setInterval(() => {
+//       if (isTypingForward) {
+//         setDisplayedText((prev) => prev + text.charAt(index));
+//         index++;
+//         if (index === text.length) {
+//           clearInterval(interval);
+//           setTimeout(() => setIsTypingForward(false), 1000);
+//         }
+//       } else {
+//         setDisplayedText((prev) => prev.slice(0, -1));
+//         index--;
+//         if (index === 0) {
+//           clearInterval(interval);
+//           setTimeout(() => setIsTypingForward(true), 1000);
+//         }
+//       }
+//     }, 50);
+//     return () => clearInterval(interval);
+//   }, [isTypingForward]);
+
+//   useEffect(() => {
+//     const canvas = document.getElementById('neuronCanvas');
+//     const ctx = canvas.getContext('2d');
+//     let stars = [];
+//     let animationFrameId;
+
+//     const setCanvasSize = () => {
+//       canvas.width = window.innerWidth;
+//       canvas.height = window.innerHeight;
+//     };
+//     setCanvasSize();
+//     window.addEventListener('resize', setCanvasSize);
+
+//     class Star {
+//       constructor() {
+//         this.x = Math.random() * canvas.width;
+//         this.y = Math.random() * canvas.height;
+//         this.size = Math.random() * 3 + 0.5;
+//         this.speedX = (Math.random() - 0.5) * 0.2;
+//         this.speedY = (Math.random() - 0.5) * 0.2;
+//         this.brightness = Math.random() * 0.8 + 0.2;
+//         this.twinkleSpeed = Math.random() * 0.02 + 0.005;
+//         this.connectionStrength = Math.random() * 0.8 + 0.2;
+//         this.activeConnections = new Set(); // Track active connections
+//         this.connectionTimers = new Map(); // Track connection animation timers
+//       }
+
+//       update() {
+//         this.x += this.speedX;
+//         this.y += this.speedY;
+
+//         // Wrap around screen
+//         if (this.x < 0) this.x = canvas.width;
+//         if (this.x > canvas.width) this.x = 0;
+//         if (this.y < 0) this.y = canvas.height;
+//         if (this.y > canvas.height) this.y = 0;
+
+//         // Enhanced twinkle effect
+//         this.brightness += Math.sin(Date.now() * this.twinkleSpeed) * 0.1;
+//         this.brightness = Math.max(0.1, Math.min(1, this.brightness));
+//       }
+
+//       draw() {
+//         // Draw star with glow effect
+//         ctx.beginPath();
+//         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        
+//         // Create gradient for glow
+//         const gradient = ctx.createRadialGradient(
+//           this.x, this.y, 0,
+//           this.x, this.y, this.size * 3
+//         );
+//         gradient.addColorStop(0, `rgba(255, 255, 255, ${this.brightness})`);
+//         gradient.addColorStop(0.4, `rgba(200, 220, 255, ${this.brightness * 0.3})`);
+//         gradient.addColorStop(1, 'rgba(100, 150, 255, 0)');
+        
+//         ctx.fillStyle = gradient;
+//         ctx.fill();
+        
+//         // Add bright center
+//         ctx.beginPath();
+//         ctx.arc(this.x, this.y, this.size * 0.3, 0, Math.PI * 2);
+//         ctx.fillStyle = `rgba(255, 255, 255, ${this.brightness})`;
+//         ctx.fill();
+//       }
+//     }
+
+//     // Create optimal number of stars for brain-like density
+//     const numStars = Math.floor((canvas.width * canvas.height) / 15000) + 25;
+//     for (let i = 0; i < numStars; i++) {
+//       stars.push(new Star());
+//     }
+
+//     const drawConnections = () => {
+//       for (let i = 0; i < stars.length; i++) {
+//         let connectionCount = 0;
+//         const maxConnections = 4; // Reduced for cleaner look
+        
+//         for (let j = i + 1; j < stars.length && connectionCount < maxConnections; j++) {
+//           const dx = stars[i].x - stars[j].x;
+//           const dy = stars[i].y - stars[j].y;
+//           const distance = Math.sqrt(dx * dx + dy * dy);
+//           const connectionKey = `${i}-${j}`;
+
+//           // Variable connection distance
+//           const maxDistance = 100 + (stars[i].connectionStrength * 60);
+          
+//           if (distance < maxDistance) {
+//             // Check if connection should be active
+//             if (!stars[i].activeConnections.has(connectionKey)) {
+//               // Random chance to start a new connection
+//               if (Math.random() < 0.003) { // Lower probability for gradual connections
+//                 stars[i].activeConnections.add(connectionKey);
+//                 stars[i].connectionTimers.set(connectionKey, 0);
+//               }
+//             }
+
+//             // If connection is active, animate it
+//             if (stars[i].activeConnections.has(connectionKey)) {
+//               let timer = stars[i].connectionTimers.get(connectionKey);
+//               timer += 0.02;
+//               stars[i].connectionTimers.set(connectionKey, timer);
+
+//               // Connection fades in and occasionally fades out
+//               let connectionOpacity = Math.sin(timer) * 0.5 + 0.5;
+              
+//               // Occasionally disconnect
+//               if (timer > 10 && Math.random() < 0.001) {
+//                 stars[i].activeConnections.delete(connectionKey);
+//                 stars[i].connectionTimers.delete(connectionKey);
+//                 continue;
+//               }
+
+//               const opacity = Math.max(0.02, (1 - distance / maxDistance) * 0.12 * connectionOpacity * stars[i].connectionStrength * stars[j].connectionStrength);
+              
+//               // Animated line drawing effect
+//               const progress = Math.min(1, timer * 0.3);
+//               const endX = stars[i].x + (stars[j].x - stars[i].x) * progress;
+//               const endY = stars[i].y + (stars[j].y - stars[i].y) * progress;
+              
+//               // Create gradient line
+//               const gradient = ctx.createLinearGradient(
+//                 stars[i].x, stars[i].y,
+//                 endX, endY
+//               );
+//               gradient.addColorStop(0, `rgba(100, 150, 255, ${opacity})`);
+//               gradient.addColorStop(0.5, `rgba(200, 220, 255, ${opacity * 1.2})`);
+//               gradient.addColorStop(1, `rgba(100, 150, 255, ${opacity * 0.3})`);
+              
+//               ctx.beginPath();
+//               ctx.moveTo(stars[i].x, stars[i].y);
+//               ctx.lineTo(endX, endY);
+//               ctx.strokeStyle = gradient;
+//               ctx.lineWidth = 0.8;
+//               ctx.stroke();
+              
+//               // Add moving pulse effect along established connections
+//               if (progress >= 1 && Math.random() < 0.01) {
+//                 const pulsePos = Math.random();
+//                 const pulseX = stars[i].x + (stars[j].x - stars[i].x) * pulsePos;
+//                 const pulseY = stars[i].y + (stars[j].y - stars[i].y) * pulsePos;
+//                 ctx.beginPath();
+//                 ctx.arc(pulseX, pulseY, 1.5, 0, Math.PI * 2);
+//                 ctx.fillStyle = `rgba(150, 200, 255, ${opacity * 4})`;
+//                 ctx.fill();
+//               }
+              
+//               connectionCount++;
+//             }
+//           } else {
+//             // Remove connection if stars move too far apart
+//             const connectionKey = `${i}-${j}`;
+//             if (stars[i].activeConnections.has(connectionKey)) {
+//               stars[i].activeConnections.delete(connectionKey);
+//               stars[i].connectionTimers.delete(connectionKey);
+//             }
+//           }
+//         }
+//       }
+//     };
+
+//     const animate = () => {
+//       // Darker fade for better contrast
+//       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+//       ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+//       // Draw connections first (behind stars)
+//       drawConnections();
+      
+//       // Then draw stars on top
+//       stars.forEach(star => {
+//         star.update();
+//         star.draw();
+//       });
+      
+//       animationFrameId = requestAnimationFrame(animate);
+//     };
+//     animate();
+
+//     return () => {
+//       window.removeEventListener('resize', setCanvasSize);
+//       cancelAnimationFrame(animationFrameId);
+//     };
+//   }, []);
+
+//   return (
+//     <div className="min-h-screen bg-black text-white relative overflow-hidden">
+//       <div className="absolute inset-0 z-0">
+//         <canvas id="neuronCanvas" className="w-full h-full"></canvas>
+//       </div>
+
+//       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-32">
+//         <motion.h1 
+//           className="text-5xl md:text-7xl font-bold"
+//           initial={{ opacity: 0, y: -20 }} 
+//           animate={{ opacity: 1, y: 0 }} 
+//           transition={{ duration: 1 }}
+//         >
+//           Hi, I'm Mihir Ranjan
+//         </motion.h1>
+
+//         <p className="mt-6 text-xl md:text-2xl text-gray-300 max-w-2xl">
+//           {displayedText}<span className="animate-pulse">|</span>
+//         </p>
+
+//         <motion.div 
+//           className="mt-10 flex gap-4"
+//           initial={{ opacity: 0 }} 
+//           animate={{ opacity: 1 }} 
+//           transition={{ delay: 1.5, duration: 1 }}
+//         >
+//           <a href="/Users/doctorranjan/Desktop/MihirRanjanPortfolio/mihir-portfolio/files/MihirRanjan_Resume_2604.pdf" className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl text-white font-semibold shadow-md">
+//             📄 View Resume
+//           </a>
+//           <a href="#contact" className="bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-xl text-white font-semibold shadow-md">
+//             📫 Contact Me
+//           </a>
+//         </motion.div>
+//       </div>
+//     </div>
+//   );
+// }
+
+
+
+// import React, { useEffect, useState } from 'react';
+
+
+// export default function Home() {
+//   const text = "  |AI & Cybersecurity Enthusiast | NLP Researcher | Problem Solver";
+//   const [displayedText, setDisplayedText] = useState("");
+//   const [isTypingForward, setIsTypingForward] = useState(true);
+//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false); // Added missing state
+
+//   useEffect(() => {
+//     let index = isTypingForward ? 0 : text.length;
+//     const interval = setInterval(() => {
+//       if (isTypingForward) {
+//         setDisplayedText((prev) => prev + text.charAt(index));
+//         index++;
+//         if (index === text.length) {
+//           clearInterval(interval);
+//           setTimeout(() => setIsTypingForward(false), 1000);
+//         }
+//       } else {
+//         setDisplayedText((prev) => prev.slice(0, -1));
+//         index--;
+//         if (index === 0) {
+//           clearInterval(interval);
+//           setTimeout(() => setIsTypingForward(true), 1000);
+//         }
+//       }
+//     }, 50);
+//     return () => clearInterval(interval);
+//   }, [isTypingForward, text]);
+
+//   useEffect(() => {
+//     const canvas = document.getElementById('neuronCanvas');
+//     const ctx = canvas.getContext('2d');
+//     let stars = [];
+//     let animationFrameId;
+
+//     const setCanvasSize = () => {
+//       canvas.width = window.innerWidth;
+//       canvas.height = window.innerHeight;
+//     };
+//     setCanvasSize();
+//     window.addEventListener('resize', setCanvasSize);
+
+//     class Star {
+//       constructor() {
+//         this.x = Math.random() * canvas.width;
+//         this.y = Math.random() * canvas.height;
+//         this.size = Math.random() * 3 + 0.5;
+//         this.speedX = (Math.random() - 0.5) * 0.2;
+//         this.speedY = (Math.random() - 0.5) * 0.2;
+//         this.brightness = Math.random() * 0.8 + 0.2;
+//         this.twinkleSpeed = Math.random() * 0.02 + 0.005;
+//         this.connectionStrength = Math.random() * 0.8 + 0.2;
+//         this.activeConnections = new Set(); // Track active connections
+//         this.connectionTimers = new Map(); // Track connection animation timers
+//       }
+
+//       update() {
+//         this.x += this.speedX;
+//         this.y += this.speedY;
+
+//         // Wrap around screen
+//         if (this.x < 0) this.x = canvas.width;
+//         if (this.x > canvas.width) this.x = 0;
+//         if (this.y < 0) this.y = canvas.height;
+//         if (this.y > canvas.height) this.y = 0;
+
+//         // Enhanced twinkle effect
+//         this.brightness += Math.sin(Date.now() * this.twinkleSpeed) * 0.1;
+//         this.brightness = Math.max(0.1, Math.min(1, this.brightness));
+//       }
+
+//       draw() {
+//         // Draw star with glow effect
+//         ctx.beginPath();
+//         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        
+//         // Create gradient for glow
+//         const gradient = ctx.createRadialGradient(
+//           this.x, this.y, 0,
+//           this.x, this.y, this.size * 3
+//         );
+//         gradient.addColorStop(0, `rgba(255, 255, 255, ${this.brightness})`);
+//         gradient.addColorStop(0.4, `rgba(200, 220, 255, ${this.brightness * 0.3})`);
+//         gradient.addColorStop(1, 'rgba(100, 150, 255, 0)');
+        
+//         ctx.fillStyle = gradient;
+//         ctx.fill();
+        
+//         // Add bright center
+//         ctx.beginPath();
+//         ctx.arc(this.x, this.y, this.size * 0.3, 0, Math.PI * 2);
+//         ctx.fillStyle = `rgba(255, 255, 255, ${this.brightness})`;
+//         ctx.fill();
+//       }
+//     }
+
+//     // Create optimal number of stars for brain-like density
+//     const numStars = Math.floor((canvas.width * canvas.height) / 15000) + 25;
+//     for (let i = 0; i < numStars; i++) {
+//       stars.push(new Star());
+//     }
+
+//     const drawConnections = () => {
+//       for (let i = 0; i < stars.length; i++) {
+//         let connectionCount = 0;
+//         const maxConnections = 4; // Reduced for cleaner look
+        
+//         for (let j = i + 1; j < stars.length && connectionCount < maxConnections; j++) {
+//           const dx = stars[i].x - stars[j].x;
+//           const dy = stars[i].y - stars[j].y;
+//           const distance = Math.sqrt(dx * dx + dy * dy);
+//           const connectionKey = `${i}-${j}`;
+
+//           // Variable connection distance
+//           const maxDistance = 100 + (stars[i].connectionStrength * 60);
+          
+//           if (distance < maxDistance) {
+//             // Check if connection should be active
+//             if (!stars[i].activeConnections.has(connectionKey)) {
+//               // Random chance to start a new connection
+//               if (Math.random() < 0.003) { // Lower probability for gradual connections
+//                 stars[i].activeConnections.add(connectionKey);
+//                 stars[i].connectionTimers.set(connectionKey, 0);
+//               }
+//             }
+
+//             // If connection is active, animate it
+//             if (stars[i].activeConnections.has(connectionKey)) {
+//               let timer = stars[i].connectionTimers.get(connectionKey);
+//               timer += 0.02;
+//               stars[i].connectionTimers.set(connectionKey, timer);
+
+//               // Connection fades in and occasionally fades out
+//               let connectionOpacity = Math.sin(timer) * 0.5 + 0.5;
+              
+//               // Occasionally disconnect
+//               if (timer > 10 && Math.random() < 0.001) {
+//                 stars[i].activeConnections.delete(connectionKey);
+//                 stars[i].connectionTimers.delete(connectionKey);
+//                 continue;
+//               }
+
+//               const opacity = Math.max(0.02, (1 - distance / maxDistance) * 0.12 * connectionOpacity * stars[i].connectionStrength * stars[j].connectionStrength);
+              
+//               // Animated line drawing effect
+//               const progress = Math.min(1, timer * 0.3);
+//               const endX = stars[i].x + (stars[j].x - stars[i].x) * progress;
+//               const endY = stars[i].y + (stars[j].y - stars[i].y) * progress;
+              
+//               // Create gradient line
+//               const gradient = ctx.createLinearGradient(
+//                 stars[i].x, stars[i].y,
+//                 endX, endY
+//               );
+//               gradient.addColorStop(0, `rgba(100, 150, 255, ${opacity})`);
+//               gradient.addColorStop(0.5, `rgba(200, 220, 255, ${opacity * 1.2})`);
+//               gradient.addColorStop(1, `rgba(100, 150, 255, ${opacity * 0.3})`);
+              
+//               ctx.beginPath();
+//               ctx.moveTo(stars[i].x, stars[i].y);
+//               ctx.lineTo(endX, endY);
+//               ctx.strokeStyle = gradient;
+//               ctx.lineWidth = 0.8;
+//               ctx.stroke();
+              
+//               // Add moving pulse effect along established connections
+//               if (progress >= 1 && Math.random() < 0.01) {
+//                 const pulsePos = Math.random();
+//                 const pulseX = stars[i].x + (stars[j].x - stars[i].x) * pulsePos;
+//                 const pulseY = stars[i].y + (stars[j].y - stars[i].y) * pulsePos;
+//                 ctx.beginPath();
+//                 ctx.arc(pulseX, pulseY, 1.5, 0, Math.PI * 2);
+//                 ctx.fillStyle = `rgba(150, 200, 255, ${opacity * 4})`;
+//                 ctx.fill();
+//               }
+              
+//               connectionCount++;
+//             }
+//           } else {
+//             // Remove connection if stars move too far apart
+//             const connectionKey = `${i}-${j}`;
+//             if (stars[i].activeConnections.has(connectionKey)) {
+//               stars[i].activeConnections.delete(connectionKey);
+//               stars[i].connectionTimers.delete(connectionKey);
+//             }
+//           }
+//         }
+//       }
+//     };
+
+//     const animate = () => {
+//       // Darker fade for better contrast
+//       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+//       ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+//       // Draw connections first (behind stars)
+//       drawConnections();
+      
+//       // Then draw stars on top
+//       stars.forEach(star => {
+//         star.update();
+//         star.draw();
+//       });
+      
+//       animationFrameId = requestAnimationFrame(animate);
+//     };
+//     animate();
+
+//     return () => {
+//       window.removeEventListener('resize', setCanvasSize);
+//       cancelAnimationFrame(animationFrameId);
+//     };
+//   }, []);
+
+//   return (
+//     <div className="min-h-screen bg-black text-white relative overflow-hidden">
+//       <div className="absolute inset-0 z-0">
+//         <canvas id="neuronCanvas" className="w-full h-full"></canvas>
+//       </div>
+
+//       {/* Navigation Menu */}
+//       <nav className="relative z-20 w-full px-6 py-4">
+//         <div className="max-w-6xl mx-auto flex justify-between items-center">
+//           <div
+//             className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent opacity-0 animate-[fadeInLeft_0.8s_ease-out_forwards]"
+//             style={{ animationDelay: '0s' }}
+//           >
+//             MR
+//           </div>
+          
+//           <ul 
+//             className="hidden md:flex space-x-8 text-sm font-medium opacity-0 animate-[fadeInUp_0.8s_ease-out_0.2s_forwards]"
+//           >
+//             <li><a href="#home" className="text-white hover:text-blue-400 transition-colors duration-300 relative group">
+//               Home
+//               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+//             </a></li>
+//             <li><a href="#about" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
+//               About
+//               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+//             </a></li>
+//             <li><a href="#skills" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
+//               Skills
+//               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+//             </a></li>
+//             <li><a href="#experience" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
+//               Experience
+//               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+//             </a></li>
+//             <li><a href="#projects" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
+//               Projects
+//               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+//             </a></li>
+//             <li><a href="#awards" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
+//               Awards & Achievements
+//               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+//             </a></li>
+//             <li><a href="#contact" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 relative group">
+//               Contact
+//               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+//             </a></li>
+//           </ul>
+
+//           {/* Mobile Menu Button */}
+//           <button
+//             className="md:hidden text-white focus:outline-none opacity-0 animate-[fadeInRight_0.8s_ease-out_forwards]"
+//             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+//           >
+//             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+//             </svg>
+//           </button>
+//         </div>
+
+//         {/* Mobile Menu */}
+//         {mobileMenuOpen && (
+//           <div
+//             className="md:hidden mt-4 bg-gray-900 bg-opacity-95 backdrop-blur-sm rounded-lg p-4 opacity-0 animate-[fadeInDown_0.3s_ease-out_forwards]"
+//           >
+//             <ul className="space-y-4 text-sm font-medium">
+//               <li><a href="#home" className="block text-white hover:text-blue-400 transition-colors duration-300">Home</a></li>
+//               <li><a href="#about" className="block text-gray-300 hover:text-blue-400 transition-colors duration-300">About</a></li>
+//               <li><a href="#skills" className="block text-gray-300 hover:text-blue-400 transition-colors duration-300">Skills</a></li>
+//               <li><a href="#experience" className="block text-gray-300 hover:text-blue-400 transition-colors duration-300">Experience</a></li>
+//               <li><a href="#projects" className="block text-gray-300 hover:text-blue-400 transition-colors duration-300">Projects</a></li>
+//               <li><a href="#awards" className="block text-gray-300 hover:text-blue-400 transition-colors duration-300">Awards & Achievements</a></li>
+//               <li><a href="#contact" className="block text-gray-300 hover:text-blue-400 transition-colors duration-300">Contact</a></li>
+//             </ul>
+//           </div>
+//         )}
+//       </nav>
+
+//       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-20">
+//         <h1 
+//           className="text-5xl md:text-7xl font-bold opacity-0 animate-[fadeInUp_1s_ease-out_forwards]"
+//         >
+//           Hi, I'm Mihir Ranjan
+//         </h1>
+
+//         <p className="mt-6 text-xl md:text-2xl text-gray-300 max-w-2xl">
+//           {displayedText}<span className="animate-pulse">|</span>
+//         </p>
+
+//         <div 
+//           className="mt-10 flex gap-4 opacity-0 animate-[fadeIn_1s_ease-out_1.5s_forwards]"
+//         >
+//           <a href="/Users/doctorranjan/Desktop/MihirRanjanPortfolio/mihir-portfolio/files/MihirRanjan_Resume_2604.pdf" className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl text-white font-semibold shadow-md transition-colors duration-300">
+//             📄 View Resume
+//           </a>
+//           <a href="#contact" className="bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-xl text-white font-semibold shadow-md transition-colors duration-300">
+//             📫 Contact Me
+//           </a>
+//         </div>
+//       </div>
+      
+//       <style jsx>{`
+//         @keyframes fadeInLeft {
+//           from {
+//             opacity: 0;
+//             transform: translateX(-20px);
+//           }
+//           to {
+//             opacity: 1;
+//             transform: translateX(0);
+//           }
+//         }
+        
+//         @keyframes fadeInRight {
+//           from {
+//             opacity: 0;
+//             transform: translateX(20px);
+//           }
+//           to {
+//             opacity: 1;
+//             transform: translateX(0);
+//           }
+//         }
+        
+//         @keyframes fadeInUp {
+//           from {
+//             opacity: 0;
+//             transform: translateY(20px);
+//           }
+//           to {
+//             opacity: 1;
+//             transform: translateY(0);
+//           }
+//         }
+        
+//         @keyframes fadeInDown {
+//           from {
+//             opacity: 0;
+//             transform: translateY(-20px);
+//           }
+//           to {
+//             opacity: 1;
+//             transform: translateY(0);
+//           }
+//         }
+        
+//         @keyframes fadeIn {
+//           from {
+//             opacity: 0;
+//           }
+//           to {
+//             opacity: 1;
+//           }
+//         }
+//       `}</style>
+//     </div>
+//   );
+// }
+
+
+
+
+// import React, { useEffect, useState } from 'react';
+
+// export default function Home() {
+//   const text = "  |AI & Cybersecurity Enthusiast | NLP Researcher | Problem Solver";
+//   const [displayedText, setDisplayedText] = useState("");
+//   const [isTypingForward, setIsTypingForward] = useState(true);
+//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+//   const [activeSection, setActiveSection] = useState('home');
+
+//   // Smooth scroll function
+//   const scrollToSection = (sectionId) => {
+//     const element = document.getElementById(sectionId);
+//     if (element) {
+//       element.scrollIntoView({ 
+//         behavior: 'smooth',
+//         block: 'start'
+//       });
+//     }
+//     setMobileMenuOpen(false); // Close mobile menu after clicking
+//   };
+
+//   // Track active section for navigation highlighting
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const sections = ['home', 'about', 'skills', 'experience', 'projects', 'awards', 'contact'];
+//       const scrollPosition = window.scrollY + 100;
+
+//       for (const section of sections) {
+//         const element = document.getElementById(section);
+//         if (element) {
+//           const { offsetTop, offsetHeight } = element;
+//           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+//             setActiveSection(section);
+//             break;
+//           }
+//         }
+//       }
+//     };
+
+//     window.addEventListener('scroll', handleScroll);
+//     return () => window.removeEventListener('scroll', handleScroll);
+//   }, []);
+
+//   useEffect(() => {
+//     let index = isTypingForward ? 0 : text.length;
+//     const interval = setInterval(() => {
+//       if (isTypingForward) {
+//         setDisplayedText((prev) => prev + text.charAt(index));
+//         index++;
+//         if (index === text.length) {
+//           clearInterval(interval);
+//           setTimeout(() => setIsTypingForward(false), 1000);
+//         }
+//       } else {
+//         setDisplayedText((prev) => prev.slice(0, -1));
+//         index--;
+//         if (index === 0) {
+//           clearInterval(interval);
+//           setTimeout(() => setIsTypingForward(true), 1000);
+//         }
+//       }
+//     }, 50);
+//     return () => clearInterval(interval);
+//   }, [isTypingForward, text]);
+
+//   useEffect(() => {
+//     const canvas = document.getElementById('neuronCanvas');
+//     if (!canvas) return;
+    
+//     const ctx = canvas.getContext('2d');
+//     let stars = [];
+//     let animationFrameId;
+
+//     const setCanvasSize = () => {
+//       canvas.width = window.innerWidth;
+//       canvas.height = window.innerHeight;
+//     };
+//     setCanvasSize();
+//     window.addEventListener('resize', setCanvasSize);
+
+//     class Star {
+//       constructor() {
+//         this.x = Math.random() * canvas.width;
+//         this.y = Math.random() * canvas.height;
+//         this.size = Math.random() * 3 + 0.5;
+//         this.speedX = (Math.random() - 0.5) * 0.2;
+//         this.speedY = (Math.random() - 0.5) * 0.2;
+//         this.brightness = Math.random() * 0.8 + 0.2;
+//         this.twinkleSpeed = Math.random() * 0.02 + 0.005;
+//         this.connectionStrength = Math.random() * 0.8 + 0.2;
+//         this.activeConnections = new Set();
+//         this.connectionTimers = new Map();
+//       }
+
+//       update() {
+//         this.x += this.speedX;
+//         this.y += this.speedY;
+
+//         if (this.x < 0) this.x = canvas.width;
+//         if (this.x > canvas.width) this.x = 0;
+//         if (this.y < 0) this.y = canvas.height;
+//         if (this.y > canvas.height) this.y = 0;
+
+//         this.brightness += Math.sin(Date.now() * this.twinkleSpeed) * 0.1;
+//         this.brightness = Math.max(0.1, Math.min(1, this.brightness));
+//       }
+
+//       draw() {
+//         ctx.beginPath();
+//         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        
+//         const gradient = ctx.createRadialGradient(
+//           this.x, this.y, 0,
+//           this.x, this.y, this.size * 3
+//         );
+//         gradient.addColorStop(0, `rgba(255, 255, 255, ${this.brightness})`);
+//         gradient.addColorStop(0.4, `rgba(200, 220, 255, ${this.brightness * 0.3})`);
+//         gradient.addColorStop(1, 'rgba(100, 150, 255, 0)');
+        
+//         ctx.fillStyle = gradient;
+//         ctx.fill();
+        
+//         ctx.beginPath();
+//         ctx.arc(this.x, this.y, this.size * 0.3, 0, Math.PI * 2);
+//         ctx.fillStyle = `rgba(255, 255, 255, ${this.brightness})`;
+//         ctx.fill();
+//       }
+//     }
+
+//     const numStars = Math.floor((canvas.width * canvas.height) / 15000) + 25;
+//     for (let i = 0; i < numStars; i++) {
+//       stars.push(new Star());
+//     }
+
+//     const drawConnections = () => {
+//       for (let i = 0; i < stars.length; i++) {
+//         let connectionCount = 0;
+//         const maxConnections = 4;
+        
+//         for (let j = i + 1; j < stars.length && connectionCount < maxConnections; j++) {
+//           const dx = stars[i].x - stars[j].x;
+//           const dy = stars[i].y - stars[j].y;
+//           const distance = Math.sqrt(dx * dx + dy * dy);
+//           const connectionKey = `${i}-${j}`;
+//           const maxDistance = 100 + (stars[i].connectionStrength * 60);
+          
+//           if (distance < maxDistance) {
+//             if (!stars[i].activeConnections.has(connectionKey)) {
+//               if (Math.random() < 0.003) {
+//                 stars[i].activeConnections.add(connectionKey);
+//                 stars[i].connectionTimers.set(connectionKey, 0);
+//               }
+//             }
+
+//             if (stars[i].activeConnections.has(connectionKey)) {
+//               let timer = stars[i].connectionTimers.get(connectionKey);
+//               timer += 0.02;
+//               stars[i].connectionTimers.set(connectionKey, timer);
+
+//               let connectionOpacity = Math.sin(timer) * 0.5 + 0.5;
+              
+//               if (timer > 10 && Math.random() < 0.001) {
+//                 stars[i].activeConnections.delete(connectionKey);
+//                 stars[i].connectionTimers.delete(connectionKey);
+//                 continue;
+//               }
+
+//               const opacity = Math.max(0.02, (1 - distance / maxDistance) * 0.12 * connectionOpacity * stars[i].connectionStrength * stars[j].connectionStrength);
+//               const progress = Math.min(1, timer * 0.3);
+//               const endX = stars[i].x + (stars[j].x - stars[i].x) * progress;
+//               const endY = stars[i].y + (stars[j].y - stars[i].y) * progress;
+              
+//               const gradient = ctx.createLinearGradient(
+//                 stars[i].x, stars[i].y, endX, endY
+//               );
+//               gradient.addColorStop(0, `rgba(100, 150, 255, ${opacity})`);
+//               gradient.addColorStop(0.5, `rgba(200, 220, 255, ${opacity * 1.2})`);
+//               gradient.addColorStop(1, `rgba(100, 150, 255, ${opacity * 0.3})`);
+              
+//               ctx.beginPath();
+//               ctx.moveTo(stars[i].x, stars[i].y);
+//               ctx.lineTo(endX, endY);
+//               ctx.strokeStyle = gradient;
+//               ctx.lineWidth = 0.8;
+//               ctx.stroke();
+              
+//               if (progress >= 1 && Math.random() < 0.01) {
+//                 const pulsePos = Math.random();
+//                 const pulseX = stars[i].x + (stars[j].x - stars[i].x) * pulsePos;
+//                 const pulseY = stars[i].y + (stars[j].y - stars[i].y) * pulsePos;
+//                 ctx.beginPath();
+//                 ctx.arc(pulseX, pulseY, 1.5, 0, Math.PI * 2);
+//                 ctx.fillStyle = `rgba(150, 200, 255, ${opacity * 4})`;
+//                 ctx.fill();
+//               }
+              
+//               connectionCount++;
+//             }
+//           } else {
+//             const connectionKey = `${i}-${j}`;
+//             if (stars[i].activeConnections.has(connectionKey)) {
+//               stars[i].activeConnections.delete(connectionKey);
+//               stars[i].connectionTimers.delete(connectionKey);
+//             }
+//           }
+//         }
+//       }
+//     };
+
+//     const animate = () => {
+//       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+//       ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+//       drawConnections();
+      
+//       stars.forEach(star => {
+//         star.update();
+//         star.draw();
+//       });
+      
+//       animationFrameId = requestAnimationFrame(animate);
+//     };
+//     animate();
+
+//     return () => {
+//       window.removeEventListener('resize', setCanvasSize);
+//       cancelAnimationFrame(animationFrameId);
+//     };
+//   }, []);
+
+//   return (
+//     <div className="bg-black text-white relative">
+//       {/* Fixed Background Canvas */}
+//       <div className="fixed inset-0 z-0">
+//         <canvas id="neuronCanvas" className="w-full h-full"></canvas>
+//       </div>
+
+//       {/* Fixed Navigation */}
+//       <nav className="fixed top-0 w-full px-6 py-4 z-50 bg-black bg-opacity-50 backdrop-blur-sm">
+//         <div className="max-w-6xl mx-auto flex justify-between items-center">
+//           <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+//             MR
+//           </div>
+          
+//           <ul className="hidden md:flex space-x-8 text-sm font-medium">
+//             {['home', 'about', 'skills', 'experience', 'projects', 'awards', 'contact'].map((section) => (
+//               <li key={section}>
+//                 <button
+//                   onClick={() => scrollToSection(section)}
+//                   className={`transition-colors duration-300 relative group capitalize ${
+//                     activeSection === section ? 'text-blue-400' : 'text-gray-300 hover:text-blue-400'
+//                   }`}
+//                 >
+//                   {section === 'awards' ? 'Awards & Achievements' : section}
+//                   <span className={`absolute -bottom-1 left-0 h-0.5 bg-blue-400 transition-all duration-300 ${
+//                     activeSection === section ? 'w-full' : 'w-0 group-hover:w-full'
+//                   }`}></span>
+//                 </button>
+//               </li>
+//             ))}
+//           </ul>
+
+//           <button
+//             className="md:hidden text-white focus:outline-none"
+//             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+//           >
+//             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+//             </svg>
+//           </button>
+//         </div>
+
+//         {mobileMenuOpen && (
+//           <div className="md:hidden mt-4 bg-gray-900 bg-opacity-95 backdrop-blur-sm rounded-lg p-4">
+//             <ul className="space-y-4 text-sm font-medium">
+//               {['home', 'about', 'skills', 'experience', 'projects', 'awards', 'contact'].map((section) => (
+//                 <li key={section}>
+//                   <button
+//                     onClick={() => scrollToSection(section)}
+//                     className="block w-full text-left text-gray-300 hover:text-blue-400 transition-colors duration-300 capitalize"
+//                   >
+//                     {section === 'awards' ? 'Awards & Achievements' : section}
+//                   </button>
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
+//         )}
+//       </nav>
+
+//       {/* HOME SECTION */}
+//       <section id="home" className="min-h-screen relative z-10 flex flex-col items-center justify-center text-center px-6">
+//         <h1 className="text-5xl md:text-7xl font-bold opacity-0 animate-[fadeInUp_1s_ease-out_forwards]">
+//           Hi, I'm Mihir Ranjan
+//         </h1>
+
+//         <p className="mt-6 text-xl md:text-2xl text-gray-300 max-w-2xl">
+//           {displayedText}<span className="animate-pulse">|</span>
+//         </p>
+
+//         <div className="mt-10 flex gap-4 opacity-0 animate-[fadeIn_1s_ease-out_1.5s_forwards]">
+//           <a href="/resume.pdf" className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl text-white font-semibold shadow-md transition-colors duration-300">
+//             📄 View Resume
+//           </a>
+//           <button
+//             onClick={() => scrollToSection('contact')}
+//             className="bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-xl text-white font-semibold shadow-md transition-colors duration-300"
+//           >
+//             📫 Contact Me
+//           </button>
+//         </div>
+//       </section>
+
+//       {/* ABOUT SECTION */}
+//       <section id="about" className="min-h-screen relative z-10 flex items-center justify-center px-6 py-20">
+//         <div className="max-w-4xl mx-auto">
+//           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+//             About Me
+//           </h2>
+//           <div className="grid md:grid-cols-2 gap-12 items-center">
+//             <div className="space-y-6">
+//               <p className="text-lg text-gray-300 leading-relaxed">
+//                 Passionate AI researcher and cybersecurity enthusiast with expertise in Natural Language Processing. 
+//                 I bridge the gap between cutting-edge AI research and practical security solutions, focusing on 
+//                 innovative approaches to modern technological challenges.
+//               </p>
+//               <p className="text-lg text-gray-300 leading-relaxed">
+//                 Currently pursuing advanced research in machine learning applications for cybersecurity, 
+//                 with a particular interest in developing intelligent systems that can adapt and evolve with 
+//                 emerging threats in the digital landscape.
+//               </p>
+//               <p className="text-lg text-gray-300 leading-relaxed">
+//                 When I'm not coding or researching, you'll find me exploring the latest developments in AI, 
+//                 contributing to open-source projects, or sharing knowledge with the tech community through 
+//                 talks and publications.
+//               </p>
+//             </div>
+//             <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+//               <h3 className="text-2xl font-bold mb-6 text-blue-400">Quick Facts</h3>
+//               <ul className="space-y-4 text-gray-300">
+//                 <li className="flex items-center gap-3">
+//                   <span className="text-blue-400">🎓</span>
+//                   <span>PhD in Computer Science (AI/ML Focus)</span>
+//                 </li>
+//                 <li className="flex items-center gap-3">
+//                   <span className="text-blue-400">🔬</span>
+//                   <span>5+ Years in AI Research</span>
+//                 </li>
+//                 <li className="flex items-center gap-3">
+//                   <span className="text-blue-400">🛡️</span>
+//                   <span>Cybersecurity Specialist</span>
+//                 </li>
+//                 <li className="flex items-center gap-3">
+//                   <span className="text-blue-400">📚</span>
+//                   <span>Published Researcher</span>
+//                 </li>
+//                 <li className="flex items-center gap-3">
+//                   <span className="text-blue-400">🌍</span>
+//                   <span>Global Conference Speaker</span>
+//                 </li>
+//               </ul>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* SKILLS SECTION */}
+//       <section id="skills" className="min-h-screen relative z-10 flex items-center justify-center px-6 py-20">
+//         <div className="max-w-6xl mx-auto">
+//           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+//             Skills & Expertise
+//           </h2>
+//           <div className="grid md:grid-cols-3 gap-8">
+//             <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+//               <h3 className="text-2xl font-bold mb-6 text-blue-400">🤖 AI & Machine Learning</h3>
+//               <ul className="space-y-3 text-gray-300">
+//                 <li>• Deep Learning (TensorFlow, PyTorch)</li>
+//                 <li>• Natural Language Processing</li>
+//                 <li>• Computer Vision</li>
+//                 <li>• Reinforcement Learning</li>
+//                 <li>• Neural Networks</li>
+//                 <li>• MLOps & Model Deployment</li>
+//               </ul>
+//             </div>
+//             <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+//               <h3 className="text-2xl font-bold mb-6 text-purple-400">🛡️ Cybersecurity</h3>
+//               <ul className="space-y-3 text-gray-300">
+//                 <li>• Penetration Testing</li>
+//                 <li>• Threat Intelligence</li>
+//                 <li>• Security Architecture</li>
+//                 <li>• Incident Response</li>
+//                 <li>• Malware Analysis</li>
+//                 <li>• Cloud Security</li>
+//               </ul>
+//             </div>
+//             <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+//               <h3 className="text-2xl font-bold mb-6 text-green-400">💻 Programming</h3>
+//               <ul className="space-y-3 text-gray-300">
+//                 <li>• Python, Java, C++</li>
+//                 <li>• JavaScript, React, Node.js</li>
+//                 <li>• SQL & NoSQL Databases</li>
+//                 <li>• Cloud Platforms (AWS, Azure)</li>
+//                 <li>• Docker & Kubernetes</li>
+//                 <li>• Git & DevOps Tools</li>
+//               </ul>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* EXPERIENCE SECTION */}
+//       <section id="experience" className="min-h-screen relative z-10 flex items-center justify-center px-6 py-20">
+//         <div className="max-w-4xl mx-auto">
+//           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+//             Experience
+//           </h2>
+//           <div className="space-y-8">
+//             <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+//               <div className="flex justify-between items-start mb-4">
+//                 <div>
+//                   <h3 className="text-2xl font-bold text-blue-400">Senior AI Research Scientist</h3>
+//                   <p className="text-xl text-gray-300">TechCorp Innovation Labs</p>
+//                 </div>
+//                 <span className="text-gray-400 text-sm">2022 - Present</span>
+//               </div>
+//               <p className="text-gray-300 leading-relaxed">
+//                 Leading cutting-edge research in AI-powered cybersecurity solutions. Developed novel algorithms 
+//                 for threat detection using deep learning techniques, resulting in 40% improvement in detection accuracy. 
+//                 Managing a team of 8 researchers and engineers across multiple high-impact projects.
+//               </p>
+//             </div>
+            
+//             <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+//               <div className="flex justify-between items-start mb-4">
+//                 <div>
+//                   <h3 className="text-2xl font-bold text-purple-400">AI Research Engineer</h3>
+//                   <p className="text-xl text-gray-300">CyberDefense Solutions</p>
+//                 </div>
+//                 <span className="text-gray-400 text-sm">2020 - 2022</span>
+//               </div>
+//               <p className="text-gray-300 leading-relaxed">
+//                 Developed machine learning models for anomaly detection in network traffic. Created automated 
+//                 systems for malware classification achieving 95% accuracy. Collaborated with security teams 
+//                 to integrate AI solutions into existing security infrastructure.
+//               </p>
+//             </div>
+            
+//             <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+//               <div className="flex justify-between items-start mb-4">
+//                 <div>
+//                   <h3 className="text-2xl font-bold text-green-400">Graduate Research Assistant</h3>
+//                   <p className="text-xl text-gray-300">University Research Lab</p>
+//                 </div>
+//                 <span className="text-gray-400 text-sm">2018 - 2020</span>
+//               </div>
+//               <p className="text-gray-300 leading-relaxed">
+//                 Conducted research on natural language processing applications in cybersecurity. Published 
+//                 12 peer-reviewed papers in top-tier conferences. Assisted in teaching advanced AI courses 
+//                 and mentored undergraduate students in research projects.
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* PROJECTS SECTION */}
+//       <section id="projects" className="min-h-screen relative z-10 flex items-center justify-center px-6 py-20">
+//         <div className="max-w-6xl mx-auto">
+//           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+//             Featured Projects
+//           </h2>
+//           <div className="grid md:grid-cols-2 gap-8">
+//             <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+//               <h3 className="text-2xl font-bold mb-4 text-blue-400">🧠 NeuroSec AI</h3>
+//               <p className="text-gray-300 mb-6">
+//                 Advanced neural network system for real-time threat detection and response. Uses ensemble 
+//                 learning techniques to identify zero-day attacks with 98% accuracy rate.
+//               </p>
+//               <div className="flex flex-wrap gap-2 mb-6">
+//                 <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">Python</span>
+//                 <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">TensorFlow</span>
+//                 <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Docker</span>
+//               </div>
+//               <button className="text-blue-400 hover:text-blue-300 transition-colors">
+//                 View Project →
+//               </button>
+//             </div>
+            
+//             <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+//               <h3 className="text-2xl font-bold mb-4 text-purple-400">🔍 TextGuard NLP</h3>
+//               <p className="text-gray-300 mb-6">
+//                 Natural language processing toolkit for detecting malicious content in communications. 
+//                 Processes over 1M messages daily with industry-leading accuracy.
+//               </p>
+//               <div className="flex flex-wrap gap-2 mb-6">
+//                 <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">Python</span>
+//                 <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">NLTK</span>
+//                 <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Flask</span>
+//               </div>
+//               <button className="text-purple-400 hover:text-purple-300 transition-colors">
+//                 View Project →
+//               </button>
+//             </div>
+            
+//             <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+//               <h3 className="text-2xl font-bold mb-4 text-green-400">🌐 CyberShield Platform</h3>
+//               <p className="text-gray-300 mb-6">
+//                 Comprehensive cybersecurity platform integrating multiple AI models for holistic 
+//                 protection. Features automated incident response and predictive threat analysis.
+//               </p>
+//               <div className="flex flex-wrap gap-2 mb-6">
+//                 <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">React</span>
+//                 <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">Node.js</span>
+//                 <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">AWS</span>
+//               </div>
+//               <button className="text-green-400 hover:text-green-300 transition-colors">
+//                 View Project →
+//               </button>
+//             </div>
+            
+//             <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+//               <h3 className="text-2xl font-bold mb-4 text-orange-400">🚀 AI Research Toolkit</h3>
+//               <p className="text-gray-300 mb-6">
+//                 Open-source research toolkit for AI security applications. Used by 500+ researchers 
+//                 worldwide for developing and testing security-focused AI models.
+//               </p>
+//               <div className="flex flex-wrap gap-2 mb-6">
+//                 <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">Python</span>
+//                 <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">PyTorch</span>
+//                 <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Jupyter</span>
+//               </div>
+//               <button className="text-orange-400 hover:text-orange-300 transition-colors">
+//                 View Project →
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+//       {/* AWARDS & ACHIEVEMENTS SECTION */}
+//       <section id="awards" className="min-h-screen relative z-10 flex items-center justify-center px-6 py-20">
+//         <div className="max-w-4xl mx-auto">
+//           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+//             Awards & Achievements
+//           </h2>
+//           <div className="space-y-8">
+//             <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-6">
+//               <h3 className="text-2xl font-bold text-blue-400 mb-2">Best Research Paper Award</h3>
+//               <p className="text-gray-300">Awarded at International Conference on Cybersecurity and AI, 2023.</p>
+//             </div>
+//             <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-6">
+//               <h3 className="text-2xl font-bold text-purple-400 mb-2">AI Innovator Fellowship</h3>
+//               <p className="text-gray-300">Granted by TechFoundry for outstanding contributions to AI in security, 2022.</p>
+//             </div>
+//             <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-6">
+//               <h3 className="text-2xl font-bold text-green-400 mb-2">Top 10 Under 30 in Tech</h3>
+//               <p className="text-gray-300">Recognized by Global Tech Leaders Magazine, 2021.</p>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+//       {/* CONTACT SECTION */}
+//       <section id="contact" className="min-h-screen relative z-10 flex items-center justify-center px-6 py-20">
+//         <div className="max-w-xl w-full bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+//           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+//             Contact Me
+//           </h2>
+//           <form className="space-y-6">
+//             <input
+//               type="text"
+//               placeholder="Your Name"
+//               className="w-full p-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
+//             />
+//             <input
+//               type="email"
+//               placeholder="Your Email"
+//               className="w-full p-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
+//             />
+//             <textarea
+//               placeholder="Your Message"
+//               rows="5"
+//               className="w-full p-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-400"
+//             ></textarea>
+//             <button
+//               type="submit"
+//               className="w-full bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl text-white font-semibold shadow-md transition-colors duration-300"
+//             >
+//               Send Message
+//             </button>
+//           </form>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// }
