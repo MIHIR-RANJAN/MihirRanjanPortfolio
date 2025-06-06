@@ -42,7 +42,7 @@ This is a React-based portfolio website featuring:
 1. Clone the repository:
 ```bash
 git clone https://github.com/MIHIR-RANJAN/portfolio-website.git
-cd portfolio-website
+cd mihir-portfolio
 ```
 
 2. Install dependencies:
