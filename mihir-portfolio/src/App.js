@@ -898,7 +898,7 @@ export default function Home() {
 
                 {/* LinkedIn Icon */}
                 <a
-                  href="https://www.linkedin.com/in/mihir-ranjan-328503201/"
+                  href="https://www.linkedin.com/in/mihir-ranjan//"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-transform transform hover:scale-110 hover:brightness-125 inline-block"
@@ -947,7 +947,7 @@ export default function Home() {
             <img src="/icons/github.svg" alt="GitHub Logo" className="w-6 h-6" />
           </a>
           <a
-            href="https://www.linkedin.com/in/mihir-ranjan-328503201/"
+            href="https://www.linkedin.com/in/mihir-ranjan/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-60 transition-opacity duration-300"
