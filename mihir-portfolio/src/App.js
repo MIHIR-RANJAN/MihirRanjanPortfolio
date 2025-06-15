@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 
 
 export default function Home() {
-  const text = "  AI & ML | Data Science | NLP | Transformers | Cybersecurity";
+  const text = "  Machine Learning | Artificial Intelligence | Data Science ";
   const [displayedText, setDisplayedText] = useState("");
   const [isTypingForward, setIsTypingForward] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
