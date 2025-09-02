@@ -550,11 +550,11 @@ export default function Home() {
                 <span className="text-gray-400 text-sm">Aug 2025 - Present</span>
               </div>
               <p className="text-gray-300 leading-relaxed">
-               
+                 I work with Okta to manage authentication and authorization, leveraging identity data for AI-driven visualization and training to enhance security insights and automation.
               </p>
 
               <a
-                href="https://drive.google.com/file/d/1N7dRhNUq7ENlPK7VuoIr409OBPbaWVuM/view?usp=drivesdk"
+                href="https://drive.google.com/drive/folders/1N6OAExnWApc36aEt1-jzcDBD8AnDafkI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="absolute bottom-4 right-4"
