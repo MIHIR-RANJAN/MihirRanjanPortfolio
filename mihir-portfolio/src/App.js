@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 
 
 export default function Home() {
-  const text = "  Machine Learning | Artificial Intelligence | Data Science ";
+  const text = "  Artificial Intelligence | Cyber Security | Data Science ";
   const [displayedText, setDisplayedText] = useState("");
   const [isTypingForward, setIsTypingForward] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -540,6 +540,29 @@ export default function Home() {
           
           <div className="space-y-8">
 
+
+            <div className="relative bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-blue-400">Intern</h3>
+                  <p className="text-xl text-gray-300">John Deere India Pvt. Ltd. | Bengaluru</p>
+                </div>
+                <span className="text-gray-400 text-sm">Aug 2025 - Present</span>
+              </div>
+              <p className="text-gray-300 leading-relaxed">
+               
+              </p>
+
+              <a
+                href="https://drive.google.com/file/d/1N7dRhNUq7ENlPK7VuoIr409OBPbaWVuM/view?usp=drivesdk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-4 right-4"
+              >
+                <img src="/icons/gdrive.svg" alt="Google Drive" className="w-6 h-6 hover:scale-110 transition-transform" />
+              </a>
+            </div>
+        
             <div className="relative bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
               <div className="flex justify-between items-start mb-4">
                 <div>
