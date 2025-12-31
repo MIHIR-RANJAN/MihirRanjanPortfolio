@@ -345,7 +345,7 @@ export default function Home() {
             {/* RESUME BOX BUTTON */}
             <li>
               <a
-                href="https://drive.google.com/file/d/1bjPIRBGT8u6e9FZ4xwFToYupk0x4i7LU/view?usp=sharing"
+                href="https://drive.google.com/file/d/1B_JX7gC8zAdCprHqKo3PHlEQuZMnhJb8/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm transition-all duration-300"
@@ -399,7 +399,7 @@ export default function Home() {
           isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
         }`}>
           <a 
-            href="https://drive.google.com/file/d/1bjPIRBGT8u6e9FZ4xwFToYupk0x4i7LU/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1B_JX7gC8zAdCprHqKo3PHlEQuZMnhJb8/view?usp=sharing" 
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl text-white font-semibold shadow-md transition-colors duration-300"
@@ -540,29 +540,6 @@ export default function Home() {
           
           <div className="space-y-8">
 
-
-            <div className="relative bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-blue-400">Intern</h3>
-                  <p className="text-xl text-gray-300">John Deere India Pvt. Ltd. | Bengaluru</p>
-                </div>
-                <span className="text-gray-400 text-sm">Aug 2025 - Present</span>
-              </div>
-              <p className="text-gray-300 leading-relaxed">
-                 I work with Okta to manage authentication and authorization, leveraging identity data for AI-driven visualization and training to enhance security insights and automation.
-              </p>
-
-              <a
-                href="https://drive.google.com/drive/folders/1N6OAExnWApc36aEt1-jzcDBD8AnDafkI"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute bottom-4 right-4"
-              >
-                <img src="/icons/gdrive.svg" alt="Google Drive" className="w-6 h-6 hover:scale-110 transition-transform" />
-              </a>
-            </div>
-        
             <div className="relative bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
               <div className="flex justify-between items-start mb-4">
                 <div>
@@ -648,8 +625,31 @@ export default function Home() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-            
             {/* Project 1 */}
+            <a
+              href="https://github.com/MIHIR-RANJAN/PRAHARI-AI-POWERED-MALWARE-ANALYSIS-PLATFORM-USING-GHIDRA.git"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-transform transform hover:scale-105 hover:brightness-110 inline-block w-full"
+            >
+              <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+                <h3 className="text-2xl font-bold mb-4 text-blue-400">PRAHARI: AI-POWERED MALWARE ANALYSIS PLATFORM USING GHIDRA</h3>
+                <p className="text-gray-300 mb-6">
+                  Built an AI-powered malware analysis platform integrating Ghidra reverse engineering with multiple LLM agents to automatically analyze binaries, extract technical artifacts, and generate human-readable security insights, using a full-stack architecture with React, and custom Ghidra scripts to process binaries in 2–5 minutes while employing cost-optimized prompting and structured JSON outputs for traceability.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">Ghidra</span>
+                  <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">LLM</span>
+                  <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Tokens</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <img src="/icons/github.png" alt="GitHub Logo" className="w-6 h-6" />
+                  <span className="text-sm text-gray-400">Aug 2025 – Present</span>
+                </div>
+              </div>
+            </a>
+            
+            {/* Project 2 */}
             <a
               href="https://github.com/your-project-link"
               target="_blank"
@@ -674,7 +674,7 @@ export default function Home() {
               </div>
             </a>
 
-            {/* Project 2 */}
+            {/* Project 3 */}
             <a
               href="https://github.com/MIHIR-RANJAN/A_Multi_Faceted_Approach_to_Fraudulent_Website_Detection.git"
               target="_blank"
@@ -699,7 +699,7 @@ export default function Home() {
               </div>
             </a>
 
-            {/* Project 3 */}
+            {/* Project 4 */}
             <a
               href="https://github.com/MIHIR-RANJAN/Trigger_Word_Detection_AiDoneRight.git"
               target="_blank"
@@ -724,7 +724,7 @@ export default function Home() {
               </div>
             </a>
 
-            {/* Project 4 */}
+            {/* Project 5 */}
             <a
               href="https://drive.google.com/file/d/15GKZhrozGMXPKujNorrlyGintx3QqqCy/view?usp=drive_link"
               target="_blank"
@@ -941,7 +941,7 @@ export default function Home() {
 
                 {/* Resume Button */}
                 <a
-                  href="https://drive.google.com/file/d/1bjPIRBGT8u6e9FZ4xwFToYupk0x4i7LU/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1B_JX7gC8zAdCprHqKo3PHlEQuZMnhJb8/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 border border-gray-500 px-5 py-2 rounded-full text-white hover:bg-white hover:text-black transition"
