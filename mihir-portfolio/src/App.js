@@ -498,9 +498,9 @@ export default function Home() {
             
             {/* AI & Cybersecurity */}
             <div className="bg-white bg-opacity-80 rounded-2xl p-6">
-              <h3 className="text-2xl font-bold mb-6 text-green-500 text-center">AI & Cybersecurity </h3>
+              <h3 className="text-2xl font-bold mb-6 text-green-500 text-center">AI & Cybersecurity</h3>
               <ul className="text-black space-y-3">
-                <li className="flex items-center gap-3">Machine Leanring& its libraries</li>
+                <li className="flex items-center gap-3">Machine Learning & its libraries</li>
                 <li className="flex items-center gap-3">RNN/LSTM/CNN</li>
                 <li className="flex items-center gap-3">NLP & Tranformers</li>
                 <li className="flex items-center gap-3">Network Architecture</li>
@@ -516,7 +516,7 @@ export default function Home() {
               <ul className="text-black space-y-3">
                 <li className="flex items-center gap-3"><img src="/icons/tensorflow.svg" alt="TensorFlow Logo" className="w-6 h-6" /> TensorFlow & Keras</li>
                 <li className="flex items-center gap-3"><img src="/icons/pandas.svg" alt="Pandas Logo" className="w-6 h-6" /> Pandas</li>
-                <li className="flex items-center gap-3"><img src="/icons/numpy.svg" alt="NumPy Logo" className="w-6 h-6" /> NumPy & Pandas</li>
+                <li className="flex items-center gap-3"><img src="/icons/numpy.svg" alt="NumPy Logo" className="w-6 h-6" /> NumPy</li>
                 <li className="flex items-center gap-3"><img src="/icons/openCV.svg" alt="OpenCV Logo" className="w-6 h-6" /> OpenCV</li>
                 <li className="flex items-center gap-3"><img src="/icons/matplotlib.svg" alt="Matplotlib Logo" className="w-6 h-6" /> Matplotlib & Seaborn</li>
                 <li className="flex items-center gap-3"><img src="/icons/scikit-learn.svg" alt="Scikit-learn Logo" className="w-6 h-6" /> scikit-learn</li>
@@ -655,17 +655,17 @@ export default function Home() {
             Featured Projects
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 auto-rows-fr">
             {/* Project 1 */}
             <a
               href="https://github.com/MIHIR-RANJAN/PRAHARI-AI-POWERED-MALWARE-ANALYSIS-PLATFORM-USING-GHIDRA.git"
               target="_blank"
               rel="noreferrer"
-              className="transition-transform transform hover:scale-105 hover:brightness-110 inline-block w-full"
+              className="transition-transform transform hover:scale-105 hover:brightness-110 inline-block w-full h-full"
             >
-              <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+              <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">PRAHARI: AI-POWERED MALWARE ANALYSIS PLATFORM USING GHIDRA</h3>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-6 flex-grow">
                   Built an AI-powered malware analysis platform integrating Ghidra with multiple LLM agents to automatically analyze binaries, extract technical artifacts, and generate human-readable security insights, using a full-stack architecture with React and custom Ghidra scripts to process binaries in 2–5 minutes with cost-optimized prompting and structured JSON outputs.
                 </p>
 
@@ -674,7 +674,7 @@ export default function Home() {
                   <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">LLM</span>
                   <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Tokens</span>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mt-auto">
                   <img src="/icons/github.png" alt="GitHub Logo" className="w-6 h-6" />
                   <span className="text-sm text-gray-400">Aug 2025 – Present</span>
                 </div>
@@ -683,14 +683,14 @@ export default function Home() {
             
             {/* Project 2 */}
             <a
-              href="https://github.com/your-project-link"
+              href="https://github.com/MIHIR-RANJAN/Mental_Health_Assessment_via_NLP.git"
               target="_blank"
               rel="noreferrer"
-              className="transition-transform transform hover:scale-105 hover:brightness-110 inline-block w-full"
+              className="transition-transform transform hover:scale-105 hover:brightness-110 inline-block w-full h-full"
             >
-              <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+              <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">Mental Health Assessment via NLP</h3>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-6 flex-grow">
                   Built an AI-powered system using NLP and ML to analyze mental health based on questionnaire input.
                   Provided personalized feedback and condition classification via a Streamlit app.
                 </p>
@@ -699,7 +699,7 @@ export default function Home() {
                   <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">NLP</span>
                   <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Streamlit</span>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mt-auto">
                   <img src="/icons/github.png" alt="GitHub Logo" className="w-6 h-6" />
                   <span className="text-sm text-gray-400">Jan 2025 – Apr 2025</span>
                 </div>
@@ -711,11 +711,11 @@ export default function Home() {
               href="https://github.com/MIHIR-RANJAN/A_Multi_Faceted_Approach_to_Fraudulent_Website_Detection.git"
               target="_blank"
               rel="noreferrer"
-              className="transition-transform transform hover:scale-105 hover:brightness-110 inline-block w-full"
+              className="transition-transform transform hover:scale-105 hover:brightness-110 inline-block w-full h-full"
             >
-              <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+              <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">Fraudulent Website Detection</h3>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-6 flex-grow">
                   Created an ML-based system to detect and classify fake websites using URL analysis, sentiment analysis,
                   OCR, TF-IDF, and NER. Integrated web scraping and ensemble anomaly detection.
                 </p>
@@ -724,7 +724,7 @@ export default function Home() {
                   <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">NLP</span>
                   <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">OCR</span>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mt-auto">
                   <img src="/icons/github.png" alt="GitHub Logo" className="w-6 h-6" />
                   <span className="text-sm text-gray-400">Sep 2024 – Dec 2024</span>
                 </div>
@@ -736,11 +736,11 @@ export default function Home() {
               href="https://github.com/MIHIR-RANJAN/Trigger_Word_Detection_AiDoneRight.git"
               target="_blank"
               rel="noreferrer"
-              className="transition-transform transform hover:scale-105 hover:brightness-110 inline-block w-full"
+              className="transition-transform transform hover:scale-105 hover:brightness-110 inline-block w-full h-full"
             >
-              <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+              <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-green-400">Trigger Word Detection</h3>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-6 flex-grow">
                   Designed a task automation system triggered by voice commands using CNN and LSTM on Raspberry Pi3.
                   Enabled hands-free actions like opening doors in smart environments.
                 </p>
@@ -749,7 +749,7 @@ export default function Home() {
                   <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">LSTM</span>
                   <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Raspberry Pi</span>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mt-auto">
                   <img src="/icons/github.png" alt="GitHub Logo" className="w-6 h-6" />
                   <span className="text-sm text-gray-400">Jan 2024</span>
                 </div>
@@ -761,11 +761,11 @@ export default function Home() {
               href="https://drive.google.com/file/d/15GKZhrozGMXPKujNorrlyGintx3QqqCy/view?usp=drive_link"
               target="_blank"
               rel="noreferrer"
-              className="transition-transform transform hover:scale-105 hover:brightness-110 inline-block w-full"
+              className="transition-transform transform hover:scale-105 hover:brightness-110 inline-block w-full h-full"
             >
-              <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8">
+              <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-orange-400">Toxic Word Replacing Chatbot</h3>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-6 flex-grow">
                   Built an NLP chatbot that identifies and replaces toxic language in real-time communication.
                   Designed custom datasets and trained models to enhance conversation quality.
                 </p>
@@ -774,7 +774,7 @@ export default function Home() {
                   <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">NLP</span>
                   <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Chatbot</span>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mt-auto">
                   <img src="/icons/gdrive.svg" alt="GitHub Logo" className="w-6 h-6" />
                   <span className="text-sm text-gray-400">Aug 2023 – Mar 2024</span>
                 </div>
@@ -953,7 +953,7 @@ export default function Home() {
 
                 {/* LinkedIn Icon */}
                 <a
-                  href="https://www.linkedin.com/in/mihir-ranjan//"
+                  href="https://www.linkedin.com/in/mihir-ranjan/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-transform transform hover:scale-110 hover:brightness-125 inline-block"
