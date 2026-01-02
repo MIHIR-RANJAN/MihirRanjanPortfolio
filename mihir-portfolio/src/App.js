@@ -991,7 +991,7 @@ export default function Home() {
      
       <div className="bg-white text-black w-full py-4 px-6 z-20 relative flex flex-col md:flex-row justify-between items-center">
         {/* Left Text */}
-        <p className="text-sm font-medium">&copy; 2025 Mihir Ranjan. All rights reserved.</p>
+        <p className="text-sm font-medium">&copy; 2026 Mihir Ranjan. All rights reserved.</p>
 
         {/* Right Icons */}
         <div className="flex gap-4 mt-2 md:mt-0">
