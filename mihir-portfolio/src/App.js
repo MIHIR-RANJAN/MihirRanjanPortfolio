@@ -683,7 +683,7 @@ export default function Home() {
             
             {/* Project 2 */}
             <a
-              href="https://github.com/MIHIR-RANJAN/Mental_Health_Assessment_via_NLP.git"
+              href="https://github.com/MIHIR-RANJAN/mental-health-assessment.git"
               target="_blank"
               rel="noreferrer"
               className="transition-transform transform hover:scale-105 hover:brightness-110 inline-block w-full h-full"
