@@ -345,7 +345,7 @@ export default function Home() {
             {/* RESUME BOX BUTTON */}
             <li>
               <a
-                href="https://drive.google.com/file/d/1lTsqKuBAQhTG4J3ou5jmrr8c0aMDt_Q1/view?usp=sharing"
+                href="https://drive.google.com/file/d/1S6xrstpAGuSFuEnCh-5PnVLdJft5pm8n/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm transition-all duration-300"
@@ -399,7 +399,7 @@ export default function Home() {
           isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
         }`}>
           <a 
-            href="https://drive.google.com/file/d/1lTsqKuBAQhTG4J3ou5jmrr8c0aMDt_Q1/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1S6xrstpAGuSFuEnCh-5PnVLdJft5pm8n/view?usp=sharing" 
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl text-white font-semibold shadow-md transition-colors duration-300"
@@ -425,21 +425,23 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                I build AI systems that make security analysis faster, smarter, and more accessible — combining machine learning, reverse engineering, and real-world security tooling.
+                I am an AI and Cybersecurity engineer focused on applying machine learning and large language models
+                to security engineering problems, including malware analysis, reverse engineering, and security
+                automation.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                From a young age, I've been captivated by the potential of intelligent systems to transform how we interact with the world. 
-                This passion led me to pursue a Bachelor’s in Artificial Intelligence, followed by a Master’s specializing in AI 
-                and Data Science.
+                I hold a Bachelor’s degree in Artificial Intelligence and am currently pursuing a Master’s degree in
+                AI and Data Science with a specialization in Cybersecurity, where I build AI-driven systems for
+                malware detection, security monitoring, and automated security analysis.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                While my specialization includes Cybersecurity, my true excitement lies in crafting intelligent systems that learn, 
-                adapt, and evolve. I’m particularly drawn to research and innovation, and I’m constantly seeking opportunities to 
-                grow, collaborate, and contribute to the AI ecosystem.
+                My work involves integrating AI models with security tools such as Ghidra, Splunk, and Okta to
+                analyze binaries, extract technical security artifacts, detect anomalies, and generate structured
+                security insights for faster decision-making.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                When I’m not working on models or hacking on new ideas, you’ll find me at the gym, listening to thought-provoking 
-                podcasts, or volunteering for social initiatives.
+                I am interested in roles such as AI Engineer, Security Engineer, and Cybersecurity Engineer, where
+                intelligent systems are used to improve threat detection, incident response, and security operations.
               </p>
             </div>
 
@@ -975,7 +977,7 @@ export default function Home() {
 
                 {/* Resume Button */}
                 <a
-                  href="https://drive.google.com/file/d/1lTsqKuBAQhTG4J3ou5jmrr8c0aMDt_Q1/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1S6xrstpAGuSFuEnCh-5PnVLdJft5pm8n/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 border border-gray-500 px-5 py-2 rounded-full text-white hover:bg-white hover:text-black transition"
@@ -991,7 +993,7 @@ export default function Home() {
      
       <div className="bg-white text-black w-full py-4 px-6 z-20 relative flex flex-col md:flex-row justify-between items-center">
         {/* Left Text */}
-        <p className="text-sm font-medium">&copy; 2026 Mihir Ranjan. All rights reserved.</p>
+        <p className="text-sm font-medium">&copy; 2025 Mihir Ranjan. All rights reserved.</p>
 
         {/* Right Icons */}
         <div className="flex gap-4 mt-2 md:mt-0">

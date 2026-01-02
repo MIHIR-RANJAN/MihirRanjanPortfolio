@@ -425,21 +425,23 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                I build AI systems that make security analysis faster, smarter, and more accessible — combining machine learning, reverse engineering, and real-world security tooling.
+                I am an AI and Cybersecurity engineer focused on applying machine learning and large language models
+                to security engineering problems, including malware analysis, reverse engineering, and security
+                automation.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                From a young age, I've been captivated by the potential of intelligent systems to transform how we interact with the world. 
-                This passion led me to pursue a Bachelor’s in Artificial Intelligence, followed by a Master’s specializing in AI 
-                and Data Science.
+                I hold a Bachelor’s degree in Artificial Intelligence and am currently pursuing a Master’s degree in
+                AI and Data Science with a specialization in Cybersecurity, where I build AI-driven systems for
+                malware detection, security monitoring, and automated security analysis.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                While my specialization includes Cybersecurity, my true excitement lies in crafting intelligent systems that learn, 
-                adapt, and evolve. I’m particularly drawn to research and innovation, and I’m constantly seeking opportunities to 
-                grow, collaborate, and contribute to the AI ecosystem.
+                My work involves integrating AI models with security tools such as Ghidra, Splunk, and Okta to
+                analyze binaries, extract technical security artifacts, detect anomalies, and generate structured
+                security insights for faster decision-making.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                When I’m not working on models or hacking on new ideas, you’ll find me at the gym, listening to thought-provoking 
-                podcasts, or volunteering for social initiatives.
+                I am interested in roles such as AI Engineer, Security Engineer, and Cybersecurity Engineer, where
+                intelligent systems are used to improve threat detection, incident response, and security operations.
               </p>
             </div>
 
