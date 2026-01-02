@@ -425,9 +425,8 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                I am an AI and Cybersecurity engineer focused on applying machine learning and large language models
-                to security engineering problems, including malware analysis, reverse engineering, and security
-                automation.
+                AI & Cybersecurity graduate focused on applying AI to security engineering, including malware analysis, reverse engineering, and
+                intelligent security automation, with hands-on experience in Splunk, Okta, and full-stack AI systems.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
                 I hold a Bachelor’s degree in Artificial Intelligence and am currently pursuing a Master’s degree in
@@ -580,7 +579,7 @@ export default function Home() {
                 <span className="text-gray-400 text-sm">Feb 2025 - Apr 2025</span>
               </div>
               <p className="text-gray-300 leading-relaxed">
-                Worked with real-world datasets on data cleaning, feature engineering, and ML model development. Gained hands-on experience with supervised learning and model optimization. Received an "Excellent" performance rating.
+                Worked on real-world business datasets by performing end-to-end data collection, preprocessing, and exploratory data analysis, while building and optimizing supervised machine learning models using scikit-learn through feature engineering, preprocessing pipelines, and hyperparameter tuning to improve model performance and support ML-driven decision-making.
               </p>
 
               <a
@@ -695,8 +694,7 @@ export default function Home() {
               <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">Mental Health Assessment via NLP</h3>
                 <p className="text-gray-300 mb-6 flex-grow">
-                  Built an AI-powered system using NLP and ML to analyze mental health based on questionnaire input.
-                  Provided personalized feedback and condition classification via a Streamlit app.
+                  Developed an AI-driven mental health assessment system that leverages natural language processing and transformer models to evaluate psychological states from open-ended user responses. Built a fine-tuned BERT-based classifier to analyze mood, anxiety, behavior, and thought patterns, enabling preliminary screening for conditions such as depression, stress, anxiety, bipolar disorder, and suicidal ideation. Designed an end-to-end architecture using Streamlit and FastAPI to deliver real-time analysis, visual risk breakdowns, and personalized recommendations, achieving 91.6% accuracy with strong precision, recall, and F1 performance while emphasizing ethical AI use, privacy, and practical deployment.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">Python</span>
@@ -720,8 +718,7 @@ export default function Home() {
               <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">Fraudulent Website Detection</h3>
                 <p className="text-gray-300 mb-6 flex-grow">
-                  Created an ML-based system to detect and classify fake websites using URL analysis, sentiment analysis,
-                  OCR, TF-IDF, and NER. Integrated web scraping and ensemble anomaly detection.
+                  Developed a multi-layered fraudulent website detection system that integrates machine learning–based URL analysis with content-driven NLP techniques to identify deceptive online platforms. The framework combines URL feature extraction using a Gradient Boosting Classifier with website scraping, sentiment analysis via Twitter RoBERTa, organizational entity recognition, and automated spelling checks to capture both structural and semantic fraud indicators. By aggregating these signals through a weighted scoring mechanism, the system delivers transparent and interpretable fraud assessments, demonstrating high detection accuracy while addressing evolving cybersecurity threats through a scalable and practical AI-driven approach.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">ML</span>
@@ -1019,4 +1016,3 @@ export default function Home() {
     </div>
   );
 }
-
