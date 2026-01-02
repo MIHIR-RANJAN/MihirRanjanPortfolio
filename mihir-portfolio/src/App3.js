@@ -665,11 +665,7 @@ export default function Home() {
               <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">PRAHARI: AI-POWERED MALWARE ANALYSIS PLATFORM USING GHIDRA</h3>
                 <p className="text-gray-300 mb-6 flex-grow">
-                  Built an AI-powered malware analysis platform that integrates Ghidra with multiple LLM agents to
-                  automatically analyze binaries, extract critical technical artifacts, and generate human-readable
-                  security insights. Designed a full-stack architecture using React and custom Ghidra scripts to
-                  process binaries within 2–5 minutes, leveraging cost-optimized prompting and structured JSON
-                  outputs for accuracy and traceability.
+                  Developed PRAHARI, an AI-powered malware analysis platform that combines headless Ghidra-based static reverse engineering with an agentic multi-LLM architecture to automate binary analysis and improve interpretability. The system extracts low-level artifacts such as functions, decompiled code, imports, and security indicators, then translates them into clear, human-readable explanations and safety verdicts for both technical and non-technical users. Built with a scalable full-stack design using React and FastAPI, PRAHARI processes diverse executable formats and generates structured JSON outputs, demonstrating high reliability across 130 real-world binaries while bridging the gap between deep reverse engineering and practical, AI-driven security decision-making.
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
