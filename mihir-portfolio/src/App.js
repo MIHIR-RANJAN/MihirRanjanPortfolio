@@ -669,9 +669,12 @@ export default function Home() {
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
+                  <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">Malware Analysis</span>
+                  <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">Reverse Engineering</span>
                   <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">Ghidra</span>
                   <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">LLM</span>
                   <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Tokens</span>
+                  
                 </div>
                 <div className="flex justify-between items-center mt-auto">
                   <img src="/icons/github.png" alt="GitHub Logo" className="w-6 h-6" />
@@ -695,7 +698,9 @@ export default function Home() {
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">Python</span>
                   <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">NLP</span>
-                  <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Streamlit</span>
+                  <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Transformers</span>
+                  <span className="px-3 py-1 bg-orange-600 text-white text-sm rounded-full">BERT</span>
+                  <span className="px-3 py-1 bg-red-600 text-white text-sm rounded-full">Mental Health AI</span>
                 </div>
                 <div className="flex justify-between items-center mt-auto">
                   <img src="/icons/github.png" alt="GitHub Logo" className="w-6 h-6" />
@@ -717,6 +722,8 @@ export default function Home() {
                   Developed a multi-layered fraudulent website detection system that integrates machine learning–based URL analysis with content-driven NLP techniques to identify deceptive online platforms. The framework combines URL feature extraction using a Gradient Boosting Classifier with website scraping, sentiment analysis via Twitter RoBERTa, organizational entity recognition, and automated spelling checks to capture both structural and semantic fraud indicators. By aggregating these signals through a weighted scoring mechanism, the system delivers transparent and interpretable fraud assessments, demonstrating high detection accuracy while addressing evolving cybersecurity threats through a scalable and practical AI-driven approach.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
+                  <span className="px-3 py-1 bg-red-600 text-white text-sm rounded-full">Fraud Detection</span>
+                  <span className="px-3 py-1 bg-yellow-600 text-white text-sm rounded-full">URL Analysis</span>
                   <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">ML</span>
                   <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">NLP</span>
                   <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">OCR</span>
@@ -738,13 +745,17 @@ export default function Home() {
               <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-green-400">Trigger Word Detection</h3>
                 <p className="text-gray-300 mb-6 flex-grow">
-                  Designed a task automation system triggered by voice commands using CNN and LSTM on Raspberry Pi3.
-                  Enabled hands-free actions like opening doors in smart environments.
+                Developed a wake-word recognition system using CNN-based audio classification to detect
+                door control commands (“door open,” “door stop,” “door close”) from microphone input.
+                Implemented MFCC-based feature extraction and optimized the model for real-time inference
+                on low-resource edge devices such as Raspberry Pi 3 and STM32 microcontrollers.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">CNN</span>
                   <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">LSTM</span>
                   <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Raspberry Pi</span>
+                  <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">Audio Processing</span>
+                  <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">CNN</span>
                 </div>
                 <div className="flex justify-between items-center mt-auto">
                   <img src="/icons/github.png" alt="GitHub Logo" className="w-6 h-6" />
@@ -755,25 +766,54 @@ export default function Home() {
 
             {/* Project 5 */}
             <a
-              href="https://drive.google.com/file/d/15GKZhrozGMXPKujNorrlyGintx3QqqCy/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1BUMc1zCymWFbZpN58wQiRQisz-FjnFCB/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               className="transition-transform transform hover:scale-105 hover:brightness-110 inline-block w-full h-full"
             >
               <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col">
-                <h3 className="text-2xl font-bold mb-4 text-orange-400">Toxic Word Replacing Chatbot</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-400">Chat-bot - Replacing toxic words</h3>
                 <p className="text-gray-300 mb-6 flex-grow">
-                  Built an NLP chatbot that identifies and replaces toxic language in real-time communication.
-                  Designed custom datasets and trained models to enhance conversation quality.
+                Designed a safety-focused NLP framework to reduce toxic and unsafe conversational behavior
+                in chatbots by combining explicit and implicit toxicity classification with CondBERT-based
+                text detoxification. Implemented ML classifiers and conditional text generation techniques
+                to replace harmful language with context-preserving, safe alternatives for ethical AI use.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">Python</span>
                   <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">NLP</span>
                   <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Chatbot</span>
+                  <span className="px-3 py-1 bg-orange-600 text-white text-sm rounded-full">Toxicity Detection</span>
+                  <span className="px-3 py-1 bg-red-600 text-white text-sm rounded-full">CondBERT</span>
                 </div>
                 <div className="flex justify-between items-center mt-auto">
                   <img src="/icons/gdrive.svg" alt="GitHub Logo" className="w-6 h-6" />
                   <span className="text-sm text-gray-400">Aug 2023 – Mar 2024</span>
+                </div>
+              </div>
+            </a>
+
+            {/* Project 6 */}
+            <a
+              href="https://drive.google.com/file/d/15GKZhrozGMXPKujNorrlyGintx3QqqCy/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-transform transform hover:scale-105 hover:brightness-110 inline-block w-full h-full"
+            >
+              <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col">
+                <h3 className="text-2xl font-bold mb-4 text-orange-400">Image Reconstruction using Deep Learning</h3>
+                <p className="text-gray-300 mb-6 flex-grow">
+                  Implemented and evaluated Trainable Nonlinear Reaction Diffusion (TNRD) models for image restoration under multiplicative noise, comparing Classic TNRD, Aubert, and Feng variants using greedy and joint training. Conducted extensive experiments across multiple filter sizes and noise levels, demonstrating improved PSNR performance over traditional PDE-based denoising methods for real-world imaging scenarios.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">Python</span>
+                  <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">Deep Learning</span>
+                  <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Computer Vision</span>
+                  <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">Image Restoration</span>
+                </div>
+                <div className="flex justify-between items-center mt-auto">
+                  <img src="/icons/gdrive.svg" alt="GitHub Logo" className="w-6 h-6" />
+                  <span className="text-sm text-gray-400">Jan 2023 – Jun 2024</span>
                 </div>
               </div>
             </a>
