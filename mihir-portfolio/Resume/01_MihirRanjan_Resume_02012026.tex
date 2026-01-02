@@ -1,0 +1,172 @@
+\documentclass[a4paper,10pt]{article}
+
+% Package imports
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+\usepackage{mathptmx}
+
+\definecolor{darkblue}{RGB}{0,0,139}
+
+\setlength{\multicolsep}{0pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.2cm, top=0.5cm, right=1.2cm, bottom=0.8cm}
+\setlength{\footskip}{5pt}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\bfseries\raggedright\normalsize
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+\newcommand{\resumeSubItem}[2]{\item{\textbf{#1} #2}}
+
+\begin{document}
+
+% -------------------- Header --------------------
+
+\begin{center}
+    {\Huge\textbf{Mihir Ranjan}}
+\end{center}
+
+\begin{center}
+\normalsize
+\makebox[\linewidth][c]{%
+\href{tel:+919631997254}{+91 96319 97254} ~|~ 
+\href{mailto:mihir29062001@gmail.com}{mihir29062001@gmail.com} ~|~ 
+\href{https://www.linkedin.com/in/mihir-ranjan/}{linkedin.com/in/mihir-ranjan/} ~|~ 
+\href{https://mihirranjanportfolio.pages.dev/}{mihirranjanportfolio.pages.dev}%
+}
+\end{center}
+
+\vspace{1mm}
+\textit{AI \& Cybersecurity graduate focused on applying AI to security engineering, including malware analysis, reverse engineering, and intelligent security automation, with hands-on experience in  Splunk, Okta, and full-stack AI systems.}
+
+
+% -------------------- Education --------------------
+
+\section{\textbf{Education}}
+\begin{itemize}[leftmargin=*]
+\item \textbf{National Forensic Sciences University (NFSU)}, Goa, India \hfill Aug 2024 -- Present \\
+MTech in AI \& Data Science (Cyber Security) | CGPA: 8.93 (Till 2nd Sem)
+
+\item \textbf{Mahindra University (MU)}, Hyderabad, India \hfill Aug 2020 -- Jun 2024 \\
+BTech in Artificial Intelligence | CGPA: 7.39
+\end{itemize}
+
+% -------------------- Experience --------------------
+
+\section{\textbf{Experience}}
+
+\textbf{Intern | John Deere India Pvt. Ltd. | Bengaluru} \hfill Aug 2025 -- Present |
+\href{https://drive.google.com/file/d/1NGKccMNJ6PCJyySXnh-hhefYy7hMsqMX/view?usp=sharing}{link}
+\begin{itemize}[leftmargin=*]
+\item Working with the GSEC Platform Security Team on enterprise authentication and access management using Single Sign-On (SSO) with Okta, supporting secure identity workflows.
+\item Performing daily security operations by analyzing Okta authentication logs and access patterns using Splunk to identify anomalies and misconfigurations.
+\item Developing an internal LLM-based chatbot that enables natural language querying of Splunk data by translating user prompts into backend search/SQL queries, reducing dependency on manual query writing.
+\end{itemize}
+
+\textbf{Artificial Intelligence Intern | Solar Secure Solutions} \hfill Feb 2025 -- Apr 2025 |
+\href{https://drive.google.com/file/d/1v5wkboBHZhA96TD6UUG0w7nRD0ga55KI/view?usp=sharing}{link}
+\begin{itemize}[leftmargin=*]
+\item Worked on real-world business datasets involving end-to-end data collection, preprocessing, and exploratory analysis to support ML-driven decision-making.
+\item Built and optimized supervised machine learning models using scikit-learn, applying feature engineering, preprocessing pipelines, and hyperparameter tuning to improve model performance.
+\end{itemize}
+
+% -------------------- Projects --------------------
+
+\section{\textbf{Projects}}
+
+\textbf{PRAHARI: AI-Powered Malware Analysis Platform Using Ghidra | NFSU} \hfill Aug 2025 -- Present |
+\href{https://github.com/MIHIR-RANJAN/PRAHARI-AI-POWERED-MALWARE-ANALYSIS-PLATFORM-USING-GHIDRA.git}{GitHub}
+\begin{itemize}[leftmargin=*]
+\item Built an AI-powered malware analysis platform integrating Ghidra reverse engineering with multi-LLM agents to automatically analyze binaries and extract technical artifacts.
+\item Automated extraction of functions, imports, strings, suspicious behaviors, and indicators of compromise (IOCs), generating structured JSON reports for traceability.
+\item Designed a full-stack system using FastAPI, React, and custom Ghidra scripts to analyze binaries within 2--5 minutes using cost-optimized prompting strategies.
+\end{itemize}
+
+\textbf{NLP-Driven Mental Health Assessment System | NFSU} \hfill Jan 2025 -- May 2025 |
+\href{https://github.com/MIHIR-RANJAN/mental-health-assessment.git}{GitHub}
+\begin{itemize}[leftmargin=*]
+\item Developed an AI-powered mental health assessment system using structured questionnaires and NLP-based mood analysis with personalized feedback generation.
+\item Implemented BERT-based transformers, classification algorithms, and Streamlit interfaces with real-time data visualization.
+\end{itemize}
+
+\textbf{Multi-Faceted Approach to Fraudulent Website Detection | NFSU} \hfill Sep 2024 -- Dec 2024 |
+\href{https://github.com/MIHIR-RANJAN/A_Multi_Faceted_Approach_to_Fraudulent_Website_Detection.git}{GitHub}
+\begin{itemize}[leftmargin=*]
+\item Developed a comprehensive fraud detection system combining sentiment analysis, OCR-based logo verification, URL parameter analysis, and ML-based classification.
+\item Applied TF-IDF vectorization, named entity recognition, OCR processing, ensemble learning, and anomaly detection techniques using Python, TensorFlow, OpenCV, and scikit-learn.
+\end{itemize}
+
+% -------------------- Skills --------------------
+
+\section{\textbf{Skills}}
+\begin{itemize}[leftmargin=*]
+\item \textbf{Programming:} Python, JavaScript (Node.js), SQL, Bash, Git \& GitHub
+\item \textbf{AI / ML:} Machine Learning, Deep Learning (CNN, RNN, LSTM), NLP, Transformers, Computer Vision, Statistical Analysis
+\item \textbf{Security \& Tools:} Malware Analysis, Reverse Engineering, Authentication \& Access Control, TensorFlow, scikit-learn, Pandas, NumPy, OpenCV, FastAPI, Streamlit, Docker, React, Okta, Splunk, MySQL
+\end{itemize}
+
+% -------------------- Awards --------------------
+
+\section{\textbf{Awards \& Certifications}}
+\begin{itemize}[leftmargin=*]
+\item \textbf{IRM Global Level 1 Certificate} \hfill 2024 |
+\href{https://drive.google.com/file/d/1bQqinD-PEgxwXxF4pJlvSC022TX1KDnj/view?usp=sharing}{link} \\
+Institute of Risk Management – Risk identification, assessment, and mitigation strategies.
+
+\item \textbf{Inter-College Debate Competition | 2nd Place} \hfill 2025 |
+\href{https://drive.google.com/file/d/11uASYH2UqavtXNcwyxmgaJoMjOUqwSY0/view?usp=sharing}{link} \\
+Cyber Law and Indian Judiciary Reforms Post-2020.
+
+\item \textbf{FITIFY | 2nd Place} \hfill 2022 |
+\href{https://drive.google.com/file/d/15pDKqMnI5vn3K-LuLI3v0hInWTLnmQs-/view?usp=sharing}{link} \\
+Mahindra University’s E-Summit – Fitness app prototype development.
+\end{itemize}
+
+\end{document}

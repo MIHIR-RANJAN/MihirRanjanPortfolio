@@ -345,7 +345,7 @@ export default function Home() {
             {/* RESUME BOX BUTTON */}
             <li>
               <a
-                href="https://drive.google.com/file/d/1S6xrstpAGuSFuEnCh-5PnVLdJft5pm8n/view?usp=sharing"
+                href="https://drive.google.com/file/d/1lTsqKuBAQhTG4J3ou5jmrr8c0aMDt_Q1/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm transition-all duration-300"
@@ -399,7 +399,7 @@ export default function Home() {
           isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
         }`}>
           <a 
-            href="https://drive.google.com/file/d/1S6xrstpAGuSFuEnCh-5PnVLdJft5pm8n/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1lTsqKuBAQhTG4J3ou5jmrr8c0aMDt_Q1/view?usp=sharing" 
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl text-white font-semibold shadow-md transition-colors duration-300"
@@ -425,7 +425,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                Hi, I’m Mihir Ranjan — an enthusiastic and curious explorer in the world of Artificial Intelligence and Data Science.
+                I build AI systems that make security analysis faster, smarter, and more accessible — combining machine learning, reverse engineering, and real-world security tooling.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
                 From a young age, I've been captivated by the potential of intelligent systems to transform how we interact with the world. 
@@ -487,9 +487,8 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-6 text-blue-500 text-center">Programming</h3>
               <ul className="text-black space-y-3">
                 <li className="flex items-center gap-3"><img src="/icons/python.svg" alt="Python Logo" className="w-6 h-6" /> Python</li>
-                <li className="flex items-center gap-3"><img src="/icons/solidity.svg" alt="Solidity Logo" className="w-6 h-6" /> Solidity</li>
-                <li className="flex items-center gap-3"><img src="/icons/cpp.svg" alt="C++ Logo" className="w-6 h-6" /> C++</li>
-                <li className="flex items-center gap-3"><img src="/icons/c.svg" alt="C Logo" className="w-6 h-6" /> C</li>
+                <li className="flex items-center gap-3"><img src="/icons/nodejs.svg" alt="Node.js Logo" className="w-6 h-6" /> JavaScript (Node.js)</li>
+                <li className="flex items-center gap-3"><img src="/icons/MySQL.svg" alt="MySQL Logo" className="w-6 h-6" /> MySQL</li>
                 <li className="flex items-center gap-3"><img src="/icons/java.svg" alt="Java Logo" className="w-6 h-6" /> Java</li>
                 <li className="flex items-center gap-3"><img src="/icons/html.svg" alt="HTML Logo" className="w-6 h-6" /> HTML & CSS</li>
                 <li className="flex items-center gap-3"><img src="/icons/github.svg" alt="Git Logo" className="w-6 h-6" /> Git & GitHub</li>
@@ -520,7 +519,6 @@ export default function Home() {
                 <li className="flex items-center gap-3"><img src="/icons/openCV.svg" alt="OpenCV Logo" className="w-6 h-6" /> OpenCV</li>
                 <li className="flex items-center gap-3"><img src="/icons/matplotlib.svg" alt="Matplotlib Logo" className="w-6 h-6" /> Matplotlib & Seaborn</li>
                 <li className="flex items-center gap-3"><img src="/icons/scikit-learn.svg" alt="Scikit-learn Logo" className="w-6 h-6" /> scikit-learn</li>
-                <li className="flex items-center gap-3"><img src="/icons/MySQL.svg" alt="MySQL Logo" className="w-6 h-6" /> MySQL</li>
               </ul>
             </div>
 
@@ -551,10 +549,10 @@ export default function Home() {
 
               <p className="text-gray-300 leading-relaxed">
                 Working with the GSEC Platform Security Team on enterprise authentication and access management using
-                Single Sign-On (SSO) with Okta, performing daily security operations such as Okta log analysis and
-                pattern identification using Splunk, while developing an internal LLM-based chatbot that enables
-                natural language querying of Splunk data by translating user queries into backend search/SQL queries
-                and returning results without requiring knowledge of query syntax.
+                Single Sign-On (SSO) with Okta, while performing daily security operations such as Okta log analysis
+                and anomaly pattern detection using Splunk. In parallel, developing an internal LLM-based chatbot
+                that enables natural language querying of Splunk data by translating user prompts into backend
+                search/SQL queries, significantly reducing reliance on manual query construction.
               </p>
 
               <a
@@ -666,7 +664,11 @@ export default function Home() {
               <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">PRAHARI: AI-POWERED MALWARE ANALYSIS PLATFORM USING GHIDRA</h3>
                 <p className="text-gray-300 mb-6 flex-grow">
-                  Built an AI-powered malware analysis platform integrating Ghidra with multiple LLM agents to automatically analyze binaries, extract technical artifacts, and generate human-readable security insights, using a full-stack architecture with React and custom Ghidra scripts to process binaries in 2–5 minutes with cost-optimized prompting and structured JSON outputs.
+                  Built an AI-powered malware analysis platform that integrates Ghidra with multiple LLM agents to
+                  automatically analyze binaries, extract critical technical artifacts, and generate human-readable
+                  security insights. Designed a full-stack architecture using React and custom Ghidra scripts to
+                  process binaries within 2–5 minutes, leveraging cost-optimized prompting and structured JSON
+                  outputs for accuracy and traceability.
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -973,7 +975,7 @@ export default function Home() {
 
                 {/* Resume Button */}
                 <a
-                  href="https://drive.google.com/file/d/1S6xrstpAGuSFuEnCh-5PnVLdJft5pm8n/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1lTsqKuBAQhTG4J3ou5jmrr8c0aMDt_Q1/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 border border-gray-500 px-5 py-2 rounded-full text-white hover:bg-white hover:text-black transition"
