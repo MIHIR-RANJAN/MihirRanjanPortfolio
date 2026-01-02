@@ -745,17 +745,13 @@ export default function Home() {
               <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-green-400">Trigger Word Detection</h3>
                 <p className="text-gray-300 mb-6 flex-grow">
-                Developed a wake-word recognition system using CNN-based audio classification to detect
-                door control commands (“door open,” “door stop,” “door close”) from microphone input.
-                Implemented MFCC-based feature extraction and optimized the model for real-time inference
-                on low-resource edge devices such as Raspberry Pi 3 and STM32 microcontrollers.
+                  This project implements a CNN-based wake word recognition system to detect door control commands such as “door open,” “door stop,” and “door close” from real-time audio input. The pipeline uses MFCC-based feature extraction, bandpass filtering, and supervised learning to achieve robust performance under noisy conditions. Designed for deployment on low-resource edge devices like Raspberry Pi 3 and STM32, the model emphasizes real-time inference, memory efficiency, and reliable audio classification for embedded AI applications.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">CNN</span>
                   <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">LSTM</span>
                   <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">Raspberry Pi</span>
                   <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">Audio Processing</span>
-                  <span className="px-3 py-1 bg-green-600 text-white text-sm rounded-full">CNN</span>
                 </div>
                 <div className="flex justify-between items-center mt-auto">
                   <img src="/icons/github.png" alt="GitHub Logo" className="w-6 h-6" />
@@ -774,10 +770,7 @@ export default function Home() {
               <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-orange-400">Chat-bot - Replacing toxic words</h3>
                 <p className="text-gray-300 mb-6 flex-grow">
-                Designed a safety-focused NLP framework to reduce toxic and unsafe conversational behavior
-                in chatbots by combining explicit and implicit toxicity classification with CondBERT-based
-                text detoxification. Implemented ML classifiers and conditional text generation techniques
-                to replace harmful language with context-preserving, safe alternatives for ethical AI use.
+                  This research addresses unsafe conversational behavior in chatbots by combining explicit and implicit toxicity detection with conditional text detoxification techniques. The proposed framework integrates machine learning–based toxicity classifiers and CondBERT to identify and replace harmful language while preserving contextual meaning. Multiple models, including Logistic Regression, SVM, and transformer-based approaches, were evaluated across diverse datasets to reduce biased and offensive outputs, enabling safer, more ethical deployment of conversational AI systems in real-world applications.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">Python</span>
@@ -803,7 +796,7 @@ export default function Home() {
               <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-orange-400">Image Reconstruction using Deep Learning</h3>
                 <p className="text-gray-300 mb-6 flex-grow">
-                  Implemented and evaluated Trainable Nonlinear Reaction Diffusion (TNRD) models for image restoration under multiplicative noise, comparing Classic TNRD, Aubert, and Feng variants using greedy and joint training. Conducted extensive experiments across multiple filter sizes and noise levels, demonstrating improved PSNR performance over traditional PDE-based denoising methods for real-world imaging scenarios.
+                  Implemented and evaluated trainable nonlinear reaction–diffusion (TNRD) models for image restoration under multiplicative noise conditions commonly found in SAR, medical, and microscopy imaging. Reproduced Classic TNRD, Aubert, and Feng models using greedy and joint training across multiple kernel sizes and noise levels. Conducted extensive PSNR-based evaluation on standard benchmark images, demonstrating that trainable diffusion models outperform traditional PDE-based approaches while maintaining computational efficiency and structural detail preservation.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">Python</span>
