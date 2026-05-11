@@ -345,7 +345,7 @@ export default function Home() {
             {/* RESUME BOX BUTTON */}
             <li>
               <a
-                href="https://drive.google.com/file/d/16elpakaFjw62hCgd_6JmqvBzOLIZKD85/view?usp=sharing"
+                href="https://drive.google.com/file/d/1-JdmBaLQl0R45XTzZVl-Z73OLk2OryQc/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm transition-all duration-300"
@@ -399,7 +399,7 @@ export default function Home() {
           isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
         }`}>
           <a 
-            href="https://drive.google.com/file/d/16elpakaFjw62hCgd_6JmqvBzOLIZKD85/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1-JdmBaLQl0R45XTzZVl-Z73OLk2OryQc/view?usp=sharing" 
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl text-white font-semibold shadow-md transition-colors duration-300"
@@ -545,7 +545,7 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-blue-400">Intern</h3>
                   <p className="text-xl text-gray-300">John Deere India Pvt. Ltd. | Bengaluru</p>
                 </div>
-                <span className="text-gray-400 text-sm">Aug 2025 – Present</span>
+                <span className="text-gray-400 text-sm">Aug 2025 – Feb 2026</span>
               </div>
 
               <p className="text-gray-300 leading-relaxed">
@@ -665,7 +665,7 @@ export default function Home() {
               <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">PRAHARI: AI-POWERED MALWARE ANALYSIS PLATFORM USING GHIDRA</h3>
                 <p className="text-gray-300 mb-6 flex-grow">
-                  Developed PRAHARI, an AI-powered malware analysis platform that combines headless Ghidra-based static reverse engineering with an agentic multi-LLM architecture to automate binary analysis and improve interpretability. The system extracts low-level artifacts such as functions, decompiled code, imports, and security indicators, then translates them into clear, human-readable explanations and safety verdicts for both technical and non-technical users. Built with a scalable full-stack design using React and FastAPI, PRAHARI processes diverse executable formats and generates structured JSON outputs, demonstrating high reliability across 130 real-world binaries while bridging the gap between deep reverse engineering and practical, AI-driven security decision-making.
+                  Developed PRAHARI, an AI-powered malware analysis platform that combines headless Ghidra-based static reverse engineering with an agentic multi-LLM architecture to automate binary analysis and improve interpretability. The system extracts low-level artifacts such as functions, decompiled code, imports, and security indicators, then translates them into clear, human-readable explanations and safety verdicts for both technical and non-technical users. Built with a scalable full-stack design using React and FastAPI, PRAHARI processes diverse executable formats and generates structured JSON outputs, demonstrating high reliability across 600 unique real-world binaries while bridging the gap between deep reverse engineering and practical, AI-driven security decision-making.
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -678,7 +678,7 @@ export default function Home() {
                 </div>
                 <div className="flex justify-between items-center mt-auto">
                   <img src="/icons/github.png" alt="GitHub Logo" className="w-6 h-6" />
-                  <span className="text-sm text-gray-400">Aug 2025 – Present</span>
+                  <span className="text-sm text-gray-400">Aug 2025 – May 2026</span>
                 </div>
               </div>
             </a>
@@ -1003,7 +1003,7 @@ export default function Home() {
 
                 {/* Resume Button */}
                 <a
-                  href="https://drive.google.com/file/d/16elpakaFjw62hCgd_6JmqvBzOLIZKD85/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1-JdmBaLQl0R45XTzZVl-Z73OLk2OryQc/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 border border-gray-500 px-5 py-2 rounded-full text-white hover:bg-white hover:text-black transition"
