@@ -345,7 +345,7 @@ export default function Home() {
             {/* RESUME BOX BUTTON */}
             <li>
               <a
-                href="https://drive.google.com/file/d/1-JdmBaLQl0R45XTzZVl-Z73OLk2OryQc/view?usp=sharing"
+                href="https://drive.google.com/file/d/16JlgX8g-z8-TU_T7YNAEIAyjt1rgGHAn/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm transition-all duration-300"
@@ -399,7 +399,7 @@ export default function Home() {
           isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
         }`}>
           <a 
-            href="https://drive.google.com/file/d/1-JdmBaLQl0R45XTzZVl-Z73OLk2OryQc/view?usp=sharing" 
+            href="https://drive.google.com/file/d/16JlgX8g-z8-TU_T7YNAEIAyjt1rgGHAn/view?usp=sharing" 
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl text-white font-semibold shadow-md transition-colors duration-300"
@@ -449,7 +449,7 @@ export default function Home() {
               <ul className="space-y-4 text-black">
                 <li className="flex items-center gap-3">
                   <span className="text-blue-400">🎓</span>
-                  <span>Master of Technology in AI & Data Science (specialization in Cybersecurity) | 2024–Present | CGPA: 8.93 (Till 2nd sem)</span>
+                  <span>Master of Technology in AI & Data Science (specialization in Cybersecurity) | 2024–2026 | CGPA: 9.21</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="text-blue-400">🎓</span>
@@ -1003,7 +1003,7 @@ export default function Home() {
 
                 {/* Resume Button */}
                 <a
-                  href="https://drive.google.com/file/d/1-JdmBaLQl0R45XTzZVl-Z73OLk2OryQc/view?usp=sharing"
+                  href="https://drive.google.com/file/d/16JlgX8g-z8-TU_T7YNAEIAyjt1rgGHAn/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 border border-gray-500 px-5 py-2 rounded-full text-white hover:bg-white hover:text-black transition"
